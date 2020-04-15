@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Person detalje</title>
+    <!--    ÆNDRE DET HER-->
+    <link rel="stylesheet" href="">
+</head>
+
+<body>
+
+
+
+
+    <header></header>
+
+    <section id="medarbejder_singleview">
+
+        <article class="medarbejder">
+            <img src="" alt="">
+            <h2 class="navn"></h2>
+            <h3 class="titel"></h3>
+            <p class="email"></p>
+        </article>
+
+    </section>
+
+    <footer></footer>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+        }
+
+
+        img {
+            width: 100%;
+        }
+
+    </style>
+
+
+
+    <script>
+        let medarbejdere = [];
+
+        document.addEventListener("DOMContentLoaded", hentData);
+
+
+        const link = "http://lauraragnars.dk/21-5/wordpress/wp-json/wp/v2/medarbejder";
+        let urlParams = new URLSearchParams(window.location.search);
+        let id = urlParams.get("id");
+        let person;
+
+
+
+        async function hentData() {
+
+            let jsonData = await fetch("http://lauraragnars.dk/21-5/wordpress/wp-json/wp/v2/medarbejder/" + id);
+            person = await jsonData.json();
+            console.log(person)
+            visMedarbejdere();
+
+        }
+        // virker ogsaa men synes det andet er bedre at se paa
+        // (`http://lauraragnars.dk/21-5/wordpress/wp-json/wp/v2/medarbejder/${id}`);
+
+        function visMedarbejdere() {
+            console.log("visMedarbejdere")
+
+
+            document.querySelector(".navn").textContent = person.title.rendered;
+            document.querySelector(".titel").textContent = person.titel;
+            document.querySelector(".email").textContent = person.email;
+            document.querySelector("img").src = person.billede.guid;
+
+
+        }
+
+    </script>
+</body>
+
+</html>

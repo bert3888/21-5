@@ -43,6 +43,7 @@
             max-width: 1000px;
             margin: 0 auto;
             padding: 10px;
+            grid-gap: 10px;
         }
 
 
@@ -84,13 +85,13 @@
                 klon.querySelector(".navn").textContent = person.title.rendered;
                 klon.querySelector(".titel").textContent = person.titel;
                 klon.querySelector(".email").textContent = person.email;
-                klon.querySelector("img").src = person.billede;
+                klon.querySelector("img").src = person.billede.guid;
 
                 container.appendChild(klon);
 
-                //                container.lastElementChild.addEventListener("click", () => {
-                //                    location.href = "medarbejder_detalje.html?id=" + person.id;
-                //                });
+                container.lastElementChild.addEventListener("click", () => {
+                    location.href = "medarbejder_singleview.html?id=" + person.id;
+                });
 
             })
 
