@@ -9,13 +9,94 @@
 </head>
 
 <body>
+    <template>
+        <article class="medarbejder">
+            <img src="" alt="">
+            <h2 class="navn"></h2>
+            <h3 class="titel"></h3>
+            <p class="email"></p>
+        </article>
+    </template>
 
     <header></header>
 
-    <section id="21-5_teamet"></section>
+    <section id="21-5_teamet">
+
+        <section class="data-container"></section>
+
+    </section>
 
     <footer></footer>
-    <script src=""></script>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+        }
+
+        .data-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 10px;
+        }
+
+
+        img {
+            width: 100%;
+        }
+
+    </style>
+
+
+
+    <script>
+        let medarbejdere = [];
+
+        document.addEventListener("DOMContentLoaded", start);
+
+
+        const link = "http://lauraragnars.dk/21-5/wordpress/wp-json/wp/v2/medarbejder"
+        const container = document.querySelector(".data-container");
+        const teametTemplate = document.querySelector("template");
+
+        function start() {
+            hentData();
+        }
+
+        async function hentData() {
+            const response = await fetch(link);
+            medarbejdere = await response.json();
+            console.log(medarbejdere);
+            visMedarbejdere();
+        }
+
+        function visMedarbejdere() {
+            console.log("visMedarbejdere")
+            container.innerHTML = "";
+
+            medarbejdere.forEach(person => {
+                let klon = teametTemplate.cloneNode(true).content;
+                klon.querySelector(".navn").textContent = person.title.rendered;
+                klon.querySelector(".titel").textContent = person.titel;
+                klon.querySelector(".email").textContent = person.email;
+                klon.querySelector("img").src = person.billede;
+
+                container.appendChild(klon);
+
+                //                container.lastElementChild.addEventListener("click", () => {
+                //                    location.href = "medarbejder_detalje.html?id=" + person.id;
+                //                });
+
+            })
+
+        }
+
+    </script>
 </body>
 
 </html>
