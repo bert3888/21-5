@@ -1,0 +1,48 @@
+/* ------ GENERELLE INDSTILLINGER ----------*/
+
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+/* ------------- HEADER OG FOOTER ---------------*/
+
+/*header*/
+
+header {
+    width: 100vw;
+
+}
+
+/*footer*/
+
+footer {
+    width: 100vw;
+    background-color: grey;
+}
+
+.col {
+    background-color: aqua;
+    text-align: center;
+
+}
+
+.footergrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+    margin: 0 auto;
+    max-width: 1000px;
+
+}
+
+/* ------------- MEDIAQUIRES ---------------*/
+@media only screen and (min-width:600px) {
+    .footergrid {
+        grid-template-columns: repeat(auto-fill, minmax(33%, 1fr));
+    }
+
+}
