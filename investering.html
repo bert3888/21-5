@@ -5,43 +5,52 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Investering</title>
-    <link rel="stylesheet" href="economics.css">
+<!--
+    <style>
+        h1 {
+            text-align: center;
+            font-size: 3em;
+        }
+
+
+        h3 {
+             text-align: center;
+            font-size: 1.7em;
+        }
+
+
+        h4 {
+            text-align: center;
+        }
+    </style>
+-->
+
 </head>
 
-<style></style>
+
 
 <body>
 
-    <section id="investering_side">
-
-        <nav>
-            <a href="economics.html">Økonomi</a>
-            <a href="jura.html">Jura</a>
-            <a href="skat.html">Skat</a>
-            <a href="finansiering.html">Financiering</a>
-            <a href="investering.html">Investering</a>
-        </nav>
-
-
-        <h1>Investering</h1>
-
-
-        <p>Bla Bla Bla om investering hos 21-5</p>
-
-
-
-    </section>
+    <section id="investering"></section>
 
 
 
 
+    <script>
+        document.addEventListener("DOMContentLoaded", start);
+
+        const url = `http://lauraragnars.dk/21-5/wordpress/wp-json/wp/v2/pages/446`;
+
+        async function start() {
+            const response = await fetch(url);
+            const json = await response.json();
+            visInvestering(json);
+        }
 
 
-
-
-
-
-    <script></script>
-</body>
-
-</html>
+        function visInvestering(data) {
+            console.log(data.content.rendered)
+            document.querySelector("#investering").innerHTML = data.content.rendered;
+        }
+    </script>
+</body></html>

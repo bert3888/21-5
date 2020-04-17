@@ -4,44 +4,59 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Skat</title>
-    <link rel="stylesheet" href="economics.css">
-</head>
+    <title>Jura</title>
+<!--
+    <style>
+        h1 {
+            text-align: center;
+            font-size: 3em;
+        }
 
-<style></style>
+
+        h2 {
+            text-align: center;
+            font-size: 2em;
+        }
+
+
+        h3 {
+            text-align: center:
+        }
+
+
+        h4 {
+            text-align: center;
+        }
+
+    </style>
+-->
+
+</head>
 
 <body>
 
-    <section id="jura_side">
-
-        <nav>
-            <a href="economics.html">Økonomi</a>
-            <a href="jura.html">Jura</a>
-            <a href="skat.html">Skat</a>
-            <a href="finansiering.html">Financiering</a>
-            <a href="investering.html">Investering</a>
-        </nav>
-
-
-        <h1>Jura</h1>
-
-
-        <p>Bla Bla Bla om jura hos 21-5</p>
-
-
-
-    </section>
+    <section id="jura"></section>
 
 
 
 
+    <script>
+        document.addEventListener("DOMContentLoaded", start);
 
+        const url = `http://lauraragnars.dk/21-5/wordpress/wp-json/wp/v2/pages/450`;
 
+        async function start() {
+            const response = await fetch(url);
+            const json = await response.json();
+            visJura(json);
+        }
 
+        function visJura(data) {
+            console.log(data.content.rendered)
+            document.querySelector("#jura").innerHTML = data.content.rendered;
+        }
 
-
-
-    <script></script>
+    </script>
 </body>
 
 </html>

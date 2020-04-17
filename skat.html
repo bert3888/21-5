@@ -5,43 +5,54 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Skat</title>
-    <link rel="stylesheet" href="economics.css">
-</head>
+<!--
+    <style>
+        h1 {
+            text-align: center;
+            font-size: 3em;
+        }
 
-<style></style>
+
+        h2 {
+            text-align: center;
+            font-size: 2em;
+        }
+
+
+        h3,
+        h4 {
+            text-align: center;
+        }
+
+    </style>
+-->
+
+</head>
 
 <body>
 
-    <section id="skat_side">
-
-        <nav>
-            <a href="economics.html">Økonomi</a>
-            <a href="jura.html">Jura</a>
-            <a href="skat.html">Skat</a>
-            <a href="finansiering.html">Financiering</a>
-            <a href="investering.html">Investering</a>
-        </nav>
-
-
-        <h1>Skat</h1>
-
-
-        <p>Bla Bla Bla om skat hos 21-5</p>
-
-
-
-    </section>
+    <section id="skat"></section>
 
 
 
 
+    <script>
+        document.addEventListener("DOMContentLoaded", start);
 
+        const url = `http://lauraragnars.dk/21-5/wordpress/wp-json/wp/v2/pages/453`;
 
+        async function start() {
+            const response = await fetch(url);
+            const json = await response.json();
+            visSkat(json);
+        }
 
+        function visSkat(data) {
+            console.log(data.content.rendered)
+            document.querySelector("#skat").innerHTML = data.content.rendered;
+        }
 
-
-
-    <script></script>
+    </script>
 </body>
 
 </html>
