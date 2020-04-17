@@ -9,6 +9,16 @@ body {
     margin: 0;
 }
 
+/* ----- LINKS --------*/
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
 /* ------------- HEADER OG FOOTER ---------------*/
 
 /*header*/
@@ -22,12 +32,18 @@ header {
 
 footer {
     width: 100vw;
-    background-color: grey;
+    background-color: black;
+    color: white;
+    font-family: georgia, serif;
+    font-weight: 100;
+
 }
 
 .col {
-    background-color: aqua;
-    text-align: center;
+    background-color: black;
+    padding: 20px;
+    margin: 20px;
+
 
 }
 
@@ -37,6 +53,19 @@ footer {
     margin: 0 auto;
     max-width: 1000px;
 
+}
+
+.footergrid a {
+    display: block;
+    color: white;
+    margin: 5px 0 5px 0;
+}
+
+.footergrid h3 {
+    padding: 0;
+    margin: 0;
+    margin-bottom: 20px;
+    margin-top: 7px;
 }
 
 /* ------------- MEDIAQUIRES ---------------*/
