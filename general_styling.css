@@ -1,0 +1,77 @@
+/* ------ GENERELLE INDSTILLINGER ----------*/
+
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+/* ----- LINKS --------*/
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* ------------- HEADER OG FOOTER ---------------*/
+
+/*header*/
+
+header {
+    width: 100vw;
+
+}
+
+/*footer*/
+
+footer {
+    width: 100vw;
+    background-color: black;
+    color: white;
+    font-family: georgia, serif;
+    font-weight: 100;
+
+}
+
+.col {
+    background-color: black;
+    padding: 20px;
+    margin: 20px;
+
+
+}
+
+.footergrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+    margin: 0 auto;
+    max-width: 1000px;
+
+}
+
+.footergrid a {
+    display: block;
+    color: white;
+    margin: 5px 0 5px 0;
+}
+
+.footergrid h3 {
+    padding: 0;
+    margin: 0;
+    margin-bottom: 20px;
+    margin-top: 7px;
+}
+
+/* ------------- MEDIAQUIRES ---------------*/
+@media only screen and (min-width:600px) {
+    .footergrid {
+        grid-template-columns: repeat(auto-fill, minmax(33%, 1fr));
+    }
+
+}
