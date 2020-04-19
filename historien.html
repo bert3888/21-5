@@ -5,17 +5,42 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Historien</title>
-    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="general_styling.css">
 </head>
 
 <body>
 
     <header></header>
 
-    <section id="historien"></section>
+    <section id="historien">
+
+    </section>
 
     <footer></footer>
-    <script src=""></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", start);
+
+
+        const link = "http://lauraragnars.dk/21-5/wordpress/wp-json/wp/v2/pages/408"
+
+        let data = []
+
+        function start() {
+            hentData();
+        }
+
+        async function hentData() {
+            const response = await fetch(link);
+            data = await response.json();
+            visData();
+        }
+
+        function visData() {
+            document.querySelector("#historien").innerHTML = data.content.rendered;
+
+        }
+
+    </script>
 </body>
 
 </html>
