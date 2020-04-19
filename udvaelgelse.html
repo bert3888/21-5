@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Økonomi, jura og skat</title>
+    <title>Processen bag boligerne</title>
     <link rel="stylesheet" href="general_styling.css">
 </head>
 
@@ -70,6 +70,8 @@
                 <h4><a href="skat.html">Skat</a></h4>
                 <h4><a href="financiering.html">Finansiering</a></h4>
                 <h4><a href="investering.html">Investering</a></h4>
+                <li> <a href="link.html">Langsigtet investering</a></li>
+                <li> <a href="link.html">Kortsigtet investering</a></li>
             </ul>
 
             <ul>
@@ -91,7 +93,7 @@
     </header>
 
 
-    <section id="economics"></section>
+    <section id="udvaelgelse"></section>
 
 
     <footer>
@@ -116,62 +118,35 @@
         </div>
 
 
-    </footer>
 
 
 
+        <script>
+            document.addEventListener("DOMContentLoaded", start);
 
-    <script>
-        document.addEventListener("DOMContentLoaded", start);
+            const url = `http://lauraragnars.dk/21-5/wordpress/wp-json/wp/v2/pages/480`;
 
-        const url = `http://lauraragnars.dk/21-5/wordpress/wp-json/wp/v2/pages/398`;
+            async function start() {
+                const respons = await fetch(url);
+                const json = await respons.json();
+                vis(json);
+            }
 
-        async function start() {
-            const response = await fetch(url);
-            const json = await response.json();
-            visEconomics(json);
-        }
-
-        function visEconomics(data) {
-            console.log(data.content.rendered)
-            document.querySelector("#economics").innerHTML = data.content.rendered;
-        } <<
-        <<
-        << < HEAD
+            function vis(data) {
+                console.log(data.content.rendered)
+                document.querySelector("#udvaelgelse").innerHTML = data.content.rendered;
 
 
+            }
+
+            // MENUUUUUUU
+
+            document.querySelector(".mainmenu").addEventListener("click", dropDown)
 
 
-        //        const link = "http://lauraragnars.dk/21-5/wordpress/wp-json/wp/v2/pages/410"
-
-        //        let footerData = []
-        //
-        //        function start() {
-        //            hentData();
-        //        }
-        //
-        //        async function hentData() {
-        //            const response = await fetch(link);
-        //            footerData = await response.json();
-        //            visData();
-        //        }
-        //
-        //        function visData() {
-        //            document.querySelector(".kontaktinfo").innerHTML = footerData.content.rendered;
-        //
-        //        }
-
-
-
-        // MENUUUUUUU
-
-        document.querySelector(".mainmenu").addEventListener("click", dropDown)
-
-
-        function dropDown() {
-            document.querySelector(".dropdownmenu").classList.toggle("hide");
-        }
-    </script>
-
+            function dropDown() {
+                document.querySelector(".dropdownmenu").classList.toggle("hide");
+            }
+        </script>
 
 </body></html>
