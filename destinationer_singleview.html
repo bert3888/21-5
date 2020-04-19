@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destination detalje</title>
+    <link rel="stylesheet" href="">
+</head>
+
+<body>
+
+    <header></header>
+
+    <section id="destination_singleview">
+
+        <article class="destination">
+            <img src="" alt="">
+            <h2 class="navn"></h2>
+            <p class="beskrivelse"></p>
+        </article>
+
+    </section>
+
+    <footer></footer>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+        }
+
+
+        img {
+            width: 100%;
+        }
+
+    </style>
+
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", hentData);
+
+
+        let urlParams = new URLSearchParams(window.location.search);
+        let id = urlParams.get("id");
+        let destination;
+
+
+
+        async function hentData() {
+
+            let jsonData = await fetch(`http://lauraragnars.dk/21-5/wordpress/wp-json/wp/v2/destination/${id}`);
+            destination = await jsonData.json();
+            console.log(destination)
+            visDestinationer();
+
+        }
+
+        function visDestinationer() {
+            document.querySelector(".navn").textContent = destination.title.rendered;
+            document.querySelector(".beskrivelse").textContent = destination.beskrivelse;
+            document.querySelector("img").src = destination.billede.guid;
+        }
+
+    </script>
+</body>
+
+</html>
