@@ -5,11 +5,109 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Destinationer</title>
-    <link rel="stylesheet" href="destinationer.css">
+    <link rel="stylesheet" href="general_styling.css">
 </head>
 
 <body>
+    <header>
+        <ul class="mainmenu">
+            <li>Boligerne</li>
+            <li>Destinationer</li>
+            <li>Konceptet bag 21-5</li>
+            <li>Økonomi, jura og skat</li>
+            <li>Om os</li>
+            <li>Kontakt</li>
+        </ul>
+
+        <div class="dropdownmenu hide">
+
+
+            <ul>
+                <h4>Processen bag boligerne</h4>
+                <li> <a href="link.html">Fra skrot til slot</a></li>
+                <li> <a href="link.html">Klargøring</a></li>
+                <li> <a href="link.html">Istandsættelse</a></li>
+                <li> <a href="link.html">Udvælgelse</a></li>
+                <li> <a href="link.html">Indreting</a></li>
+
+                <h4>Til salg lige nu</h4>
+                <li> <a href="link.html">Ejerforening Family</a></li>
+                <li> <a href="link.html">Ejerforening Grande</a></li>
+                <li><a href="link.html">Ejerforening Large</a></li>
+                <li> <a href="link.html">Gensalg</a></li>
+
+                <h4><a href="link.html">Alle stiftede foreninger</a></h4>
+            </ul>
+
+
+
+            <ul>
+                <h4><a href="destinationer.html">Destinationer</a></h4>
+                <li><a href="destionation_singleview.html?ID">Sydspanien</a></li>
+                <li> <a href="destionation_singleview.html?ID">Rom</a></li>
+                <li> <a href="destionation_singleview.html?ID">Mallorca</a></li>
+                <li> <a href="destionation_singleview.html?ID">New York</a></li>
+                <li> <a href="destionation_singleview.html?ID">Toscana</a></li>
+                <li> <a href="destionation_singleview.html?ID">Chamonix</a></li>
+                <li> <a href="destionation_singleview.html?ID">Sydfrankrig</a></li>
+                <li> <a href="destionation_singleview.html?ID">Barcelona</a></li>
+            </ul>
+
+
+
+            <ul>
+                <h4><a href="laer_21_5_at_kende.html">Lær 21-5 at kende</a></h4>
+                <h4><a href="faelleskab_i_foreningen.html">Fællesskab i foreningen</a></h4>
+                <h4><a href="fordeling_af_ugerne.html">Fordeling af ugerne</a></h4>
+                <h4><a href="kob_og_salg_af_andel.html">Køb og salg af andel</a></h4>
+                <h4><a href="faq.html">FAQ</a></h4>
+            </ul>
+
+
+
+            <ul>
+                <h4><a href="skat.html">Skat</a></h4>
+                <h4><a href="financiering.html">Finansiering</a></h4>
+                <h4><a href="investering.html">Investering</a></h4>
+                <li> <a href="link.html">Langsigtet investering</a></li>
+                <li> <a href="link.html">Kortsigtet investering</a></li>
+            </ul>
+
+            <ul>
+                <h4><a href="21-5_teamet.html">21-5 Teamet</a></h4>
+                <h4><a href="historien.html">Historien bag 21-5</a></h4>
+                <h4><a href="21-5_familier.html">Mød de andre 21-5 familier</a></h4>
+            </ul>
+
+            <ul>
+                <h4><a href="bliv_medlem.html">Bliv medlem af 21-5</a></h4>
+                <li> <a href="link.html">Book et kaffemøde</a></li>
+                <li> <a href="link.html">Orienteringsmøde</a></li>
+                <h4><a href="karriere.html">Karriere i 21-5</a></h4>
+
+            </ul>
+
+
+        </div>
+    </header>
+
+    <template>
+        <article class="destinationer">
+            <img src="" alt="">
+            <h2 class="navn"></h2>
+            <p class="beskrivelse"></p>
+        </article>
+    </template>
+
     <header></header>
+
+    <section id="21-5_teamet">
+
+        <section class="data-container"></section>
+
+    </section>
+
+    <!--
     <section id="destinationer_side">
 
         <nav>
@@ -32,12 +130,106 @@
 
 
     </section>
-    <footer></footer>
+-->
+    <footer>
+        <div class="footergrid">
+            <div class="col">
+                <div class="kontaktinfo"></div>
+            </div>
+
+            <div class="col">
+                <h3>Andet</h3>
+                <a href="link.html">Nyheder</a>
+                <a href="link.html">Presse</a>
+                <a href="link.html">Cookie- og privatlivspolitik</a>
+                <a href="link.html">Ofte stillede spørgsmål</a>
+            </div>
+            <div class="col">
+                <div class="fb_icon"></div>
+                <p>Besøg os på Facebook!</p>
+                <div class="instagram_icon"></div>
+                Brug #215moments
+            </div>
+        </div>
+
+
+    </footer>
 
 
 
 
-    <script src=""></script>
-</body>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
 
-</html>
+        body {
+            margin: 0;
+        }
+
+        .data-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 10px;
+            grid-gap: 10px;
+        }
+
+
+        img {
+            width: 100%;
+        }
+    </style>
+
+
+
+    <script>
+        let destinationer = [];
+
+        document.addEventListener("DOMContentLoaded", start);
+
+
+        const link = "http://lauraragnars.dk/21-5/wordpress/wp-json/wp/v2/destination"
+        const container = document.querySelector(".data-container");
+        const teametTemplate = document.querySelector("template");
+
+        function start() {
+            hentData();
+        }
+
+        async function hentData() {
+            const response = await fetch(link);
+            destinationer = await response.json();
+            console.log(destinationer);
+            visDestinationer();
+        }
+
+        function visDestinationer() {
+            console.log("visDestinationer")
+            container.innerHTML = "";
+
+            destinationer.forEach(destination => {
+                let klon = teametTemplate.cloneNode(true).content;
+                klon.querySelector(".navn").textContent = destination.title.rendered;
+                klon.querySelector(".beskrivelse").textContent = destination.beskrivelse;
+                klon.querySelector("img").src = destination.billede.guid;
+
+                container.appendChild(klon);
+
+                container.lastElementChild.addEventListener("click", () => {
+                    location.href = "destinationer_singleview.html?id=" + destination.id;
+                });
+
+            })
+
+        }
+
+        document.querySelector(".mainmenu").addEventListener("click", dropDown)
+
+
+        function dropDown() {
+            document.querySelector(".dropdownmenu").classList.toggle("hide");
+        }
+    </script>
+</body></html>
