@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejerforening</title>
+    <link rel="stylesheet" href="general_styling.css">
+</head>
+
+<style></style>
+
+<body>
+    <header>
+        <ul class="mainmenu">
+            <li>Boligerne</li>
+            <li>Destinationer</li>
+            <li>Konceptet bag 21-5</li>
+            <li>Økonomi, jura og skat</li>
+            <li>Om os</li>
+            <li>Kontakt</li>
+        </ul>
+
+        <div class="dropdownmenu hide">
+
+
+            <ul>
+                <h4>Processen bag boligerne</h4>
+                <li> <a href="link.html">Fra skrot til slot</a></li>
+                <li> <a href="link.html">Klargøring</a></li>
+                <li> <a href="link.html">Istandsættelse</a></li>
+                <li> <a href="link.html">Udvælgelse</a></li>
+                <li> <a href="link.html">Indreting</a></li>
+
+                <h4>Til salg lige nu</h4>
+                <li> <a href="link.html">Ejerforening Family</a></li>
+                <li> <a href="link.html">Ejerforening Grande</a></li>
+                <li><a href="link.html">Ejerforening Large</a></li>
+                <li> <a href="gensalg.html">Gensalg</a></li>
+
+                <h4><a href="link.html">Alle stiftede foreninger</a></h4>
+            </ul>
+
+
+
+            <ul>
+                <h4><a href="destinationer.html">Destinationer</a></h4>
+                <li><a href="destionation_singleview.html?ID">Sydspanien</a></li>
+                <li> <a href="destionation_singleview.html?ID">Rom</a></li>
+                <li> <a href="destionation_singleview.html?ID">Mallorca</a></li>
+                <li> <a href="destionation_singleview.html?ID">New York</a></li>
+                <li> <a href="destionation_singleview.html?ID">Toscana</a></li>
+                <li> <a href="destionation_singleview.html?ID">Chamonix</a></li>
+                <li> <a href="destionation_singleview.html?ID">Sydfrankrig</a></li>
+                <li> <a href="destionation_singleview.html?ID">Barcelona</a></li>
+            </ul>
+
+
+
+            <ul>
+                <h4><a href="laer_21_5_at_kende.html">Lær 21-5 at kende</a></h4>
+                <h4><a href="faelleskab_i_foreningen.html">Fællesskab i foreningen</a></h4>
+                <h4><a href="fordeling_af_ugerne.html">Fordeling af ugerne</a></h4>
+                <h4><a href="kob_og_salg_af_andel.html">Køb og salg af andel</a></h4>
+                <h4><a href="faq.html">FAQ</a></h4>
+            </ul>
+
+
+
+            <ul>
+                <h4><a href="skat.html">Skat</a></h4>
+                <h4><a href="financiering.html">Finansiering</a></h4>
+                <h4><a href="investering.html">Investering</a></h4>
+                <li> <a href="link.html">Langsigtet investering</a></li>
+                <li> <a href="link.html">Kortsigtet investering</a></li>
+            </ul>
+
+            <ul>
+                <h4><a href="21-5_teamet.html">21-5 Teamet</a></h4>
+                <h4><a href="historien.html">Historien bag 21-5</a></h4>
+                <h4><a href="21-5_familier.html">Mød de andre 21-5 familier</a></h4>
+            </ul>
+
+            <ul>
+                <h4><a href="bliv_medlem.html">Bliv medlem af 21-5</a></h4>
+                <li> <a href="link.html">Book et kaffemøde</a></li>
+                <li> <a href="link.html">Orienteringsmøde</a></li>
+                <h4><a href="karriere.html">Karriere i 21-5</a></h4>
+
+            </ul>
+
+
+        </div>
+    </header>
+
+    <section id="Ejerforening_side">
+
+    </section>
+    <footer>
+        <div class="footergrid">
+            <div class="col">
+                <div class="kontaktinfo"></div>
+            </div>
+
+            <div class="col">
+                <h3>Andet</h3>
+                <a href="link.html">Nyheder</a>
+                <a href="link.html">Presse</a>
+                <a href="link.html">Cookie- og privatlivspolitik</a>
+                <a href="link.html">Ofte stillede spørgsmål</a>
+            </div>
+            <div class="col">
+                <div class="fb_icon"></div>
+                <p>Besøg os på Facebook!</p>
+                <div class="instagram_icon"></div>
+                Brug #215moments
+            </div>
+        </div>
+
+
+    </footer>
+
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", start);
+
+        const url = `http://lauraragnars.dk/21-5/wordpress/wp-json/wp/v2/pages/465`;
+
+        async function start() {
+            const respons = await fetch(url);
+            const json = await respons.json();
+            vis(json);
+        }
+
+        function vis(data) {
+            console.log(data.content.rendered)
+            document.querySelector("section").innerHTML = data.content.rendered;
+
+
+        }
+
+
+
+        // MENUUUUUUU
+
+        document.querySelector(".mainmenu").addEventListener("click", dropDown)
+
+
+        function dropDown() {
+            document.querySelector(".dropdownmenu").classList.toggle("hide");
+        }
+
+    </script>
+</body>
+
+</html>
