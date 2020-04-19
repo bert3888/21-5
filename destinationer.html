@@ -5,11 +5,29 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Destinationer</title>
-    <link rel="stylesheet" href="destinationer.css">
+    <link rel="stylesheet" href="">
 </head>
 
 <body>
     <header></header>
+
+    <template>
+        <article class="destinationer">
+            s<img src="" alt="">
+            <h2 class="navn"></h2>
+            <p class="beskrivelse"></p>
+        </article>
+    </template>
+
+    <header></header>
+
+    <section id="21-5_teamet">
+
+        <section class="data-container"></section>
+
+    </section>
+
+    <!--
     <section id="destinationer_side">
 
         <nav>
@@ -32,12 +50,77 @@
 
 
     </section>
+-->
     <footer></footer>
 
 
 
 
-    <script src=""></script>
-</body>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
 
-</html>
+        body {
+            margin: 0;
+        }
+
+        .data-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 10px;
+            grid-gap: 10px;
+        }
+
+
+        img {
+            width: 100%;
+        }
+    </style>
+
+
+
+    <script>
+        let destinationer = [];
+
+        document.addEventListener("DOMContentLoaded", start);
+
+
+        const link = "http://lauraragnars.dk/21-5/wordpress/wp-json/wp/v2/destination"
+        const container = document.querySelector(".data-container");
+        const teametTemplate = document.querySelector("template");
+
+        function start() {
+            hentData();
+        }
+
+        async function hentData() {
+            const response = await fetch(link);
+            destinationer = await response.json();
+            console.log(destinationer);
+            visDestinationer();
+        }
+
+        function visDestinationer() {
+            console.log("visDestinationer")
+            container.innerHTML = "";
+
+            destinationer.forEach(destination => {
+                let klon = teametTemplate.cloneNode(true).content;
+                klon.querySelector(".navn").textContent = destination.title.rendered;
+                klon.querySelector(".beskrivelse").textContent = destination.beskrivelse;
+                klon.querySelector("img").src = destination.billede.guid;
+
+                container.appendChild(klon);
+
+                container.lastElementChild.addEventListener("click", () => {
+                    location.href = "destinationer_singleview.html?id=" + destination.id;
+                });
+
+            })
+
+        }
+    </script>
+</body></html>
