@@ -4,12 +4,13 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Processen bag boligerne</title>
+    <title>Ejerforening</title>
     <link rel="stylesheet" href="general_styling.css">
 </head>
 
-<body>
+<style></style>
 
+<body>
     <header>
         <ul class="mainmenu">
             <li>Boligerne</li>
@@ -35,7 +36,7 @@
                 <li> <a href="link.html">Ejerforening Family</a></li>
                 <li> <a href="link.html">Ejerforening Grande</a></li>
                 <li><a href="link.html">Ejerforening Large</a></li>
-                <li> <a href="link.html">Gensalg</a></li>
+                <li> <a href="gensalg.html">Gensalg</a></li>
 
                 <h4><a href="link.html">Alle stiftede foreninger</a></h4>
             </ul>
@@ -92,10 +93,9 @@
         </div>
     </header>
 
+    <section id="udvaelgelse">
 
-    <section id="udvaelgelse"></section>
-
-
+    </section>
     <footer>
         <div class="footergrid">
             <div class="col">
@@ -118,35 +118,40 @@
         </div>
 
 
+    </footer>
 
 
 
-        <script>
-            document.addEventListener("DOMContentLoaded", start);
+    <script>
+        document.addEventListener("DOMContentLoaded", start);
 
-            const url = `http://lauraragnars.dk/21-5/wordpress/wp-json/wp/v2/pages/480`;
+        const url = `http://lauraragnars.dk/21-5/wordpress/wp-json/wp/v2/pages/480`;
 
-            async function start() {
-                const respons = await fetch(url);
-                const json = await respons.json();
-                vis(json);
-            }
+        async function start() {
+            const respons = await fetch(url);
+            const json = await respons.json();
+            vis(json);
+        }
 
-            function vis(data) {
-                console.log(data.content.rendered)
-                document.querySelector("#udvaelgelse").innerHTML = data.content.rendered;
-
-
-            }
-
-            // MENUUUUUUU
-
-            document.querySelector(".mainmenu").addEventListener("click", dropDown)
+        function vis(data) {
+            console.log(data.content.rendered)
+            document.querySelector("#udvaelgelse").innerHTML = data.content.rendered;
 
 
-            function dropDown() {
-                document.querySelector(".dropdownmenu").classList.toggle("hide");
-            }
-        </script>
+        }
 
-</body></html>
+
+
+        // MENUUUUUUU
+
+        document.querySelector(".mainmenu").addEventListener("click", dropDown)
+
+
+        function dropDown() {
+            document.querySelector(".dropdownmenu").classList.toggle("hide");
+        }
+
+    </script>
+</body>
+
+</html>
