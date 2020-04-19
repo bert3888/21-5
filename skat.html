@@ -5,43 +5,70 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Skat</title>
-    <link rel="stylesheet" href="economics.css">
+    <link rel="stylesheet" href="emma.css">
+      <link rel="stylesheet" href="general_styling.css">
 </head>
-
-<style></style>
 
 <body>
 
-    <section id="skat_side">
-
-        <nav>
-            <a href="economics.html">Økonomi</a>
-            <a href="jura.html">Jura</a>
-            <a href="skat.html">Skat</a>
-            <a href="finansiering.html">Financiering</a>
-            <a href="investering.html">Investering</a>
-        </nav>
-
-
-        <h1>Skat</h1>
+      <header>
+        <ul>
+            <li>Boligerne</li>
+            <li>Destinationer</li>
+            <li>Konceptet bag 21-5</li>
+            <li>Økonomi, jura og skat</li>
+            <li>Om os</li>
+            <li>Kontakt</li>
+        </ul>
+    </header>
 
 
-        <p>Bla Bla Bla om skat hos 21-5</p>
+    <section id="skat"></section>
+
+
+    <footer>
+        <div class="footergrid">
+            <div class="col">
+                <div class="kontaktinfo"></div>
+            </div>
+
+            <div class="col">
+                <h3>Andet</h3>
+                <a href="link.html">Nyheder</a>
+                <a href="link.html">Presse</a>
+                <a href="link.html">Cookie- og privatlivspolitik</a>
+                <a href="link.html">Ofte stillede spørgsmål</a>
+            </div>
+            <div class="col">
+                <div class="fb_icon"></div>
+                <p>Besøg os på Facebook!</p>
+                <div class="instagram_icon"></div>
+                Brug #215moments
+            </div>
+        </div>
+
+
+    </footer>
 
 
 
-    </section>
+    <script>
+        document.addEventListener("DOMContentLoaded", start);
 
+        const url = `http://lauraragnars.dk/21-5/wordpress/wp-json/wp/v2/pages/453`;
 
+        async function start() {
+            const response = await fetch(url);
+            const json = await response.json();
+            visSkat(json);
+        }
 
+        function visSkat(data) {
+            console.log(data.content.rendered)
+            document.querySelector("#skat").innerHTML = data.content.rendered;
+        }
 
-
-
-
-
-
-
-    <script></script>
+    </script>
 </body>
 
 </html>

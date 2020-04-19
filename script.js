@@ -1,7 +1,7 @@
    document.addEventListener("DOMContentLoaded", start);
 
 
-   const link = "http://lauraragnars.dk/21-5/wordpress/wp-json/wp/v2/tekst/356"
+   const link = "http://lauraragnars.dk/21-5/wordpress/wp-json/wp/v2/pages/410"
 
    let footerData = []
 
@@ -16,9 +16,6 @@
    }
 
    function visData() {
-       document.querySelector(".navn").textContent = footerData.paragraf1;
-       document.querySelector(".adresse").textContent = footerData.paragraf2;
-       document.querySelector(".tlf").textContent = footerData.paragraf3;
-       document.querySelector(".email").textContent = footerData.paragraf4;
-       document.querySelector(".cvr").textContent = footerData.paragraf5;
+       document.querySelector(".kontaktinfo").innerHTML = footerData.content.rendered;
+
    }
