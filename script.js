@@ -19,3 +19,14 @@
        document.querySelector(".kontaktinfo").innerHTML = footerData.content.rendered;
 
    }
+
+
+
+   // MENUUUUUUU
+
+   document.querySelector(".mainmenu").addEventListener("click", dropDown)
+
+
+   function dropDown() {
+       document.querySelector(".dropdownmenu").classList.toggle("hide");
+   }
