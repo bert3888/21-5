@@ -28,5 +28,6 @@
 
 
   function dropDown() {
-      document.querySelector(".dropdownmenu").classList.toggle("hide");
+      console.log("dropDown")
+      document.querySelector(".dropdownmenu").classList.toggle("hidden");
   }
