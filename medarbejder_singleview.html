@@ -5,7 +5,6 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Person detalje</title>
-    <!--    ÆNDRE DET HER-->
     <link rel="stylesheet" href="general_styling.css">
 </head>
 
@@ -28,17 +27,19 @@
 
             <ul>
                 <h4>Processen bag boligerne</h4>
-                <li> <a href="link.html">Fra skrot til slot</a></li>
-                <li> <a href="link.html">Klargøring</a></li>
-                <li> <a href="link.html">Istandsættelse</a></li>
-                <li> <a href="link.html">Udvælgelse</a></li>
-                <li> <a href="link.html">Indreting</a></li>
+                <li> <a href="fra_skrot_til_slot.html">Fra skrot til slot</a></li>
+                <li> <a href="klargoring.html">Klargøring</a></li>
+                <li> <a href="Istandsaettelse.html">Istandsættelse</a></li>
+                <li> <a href="udvaelgelse.html">Udvælgelse</a></li>
+                <li> <a href="Indretning.html">Indreting</a></li>
 
                 <h4>Til salg lige nu</h4>
-                <li> <a href="link.html">Ejerforening Family</a></li>
-                <li> <a href="link.html">Ejerforening Grande</a></li>
-                <li><a href="link.html">Ejerforening Large</a></li>
-                <li> <a href="link.html">Gensalg</a></li>
+                <li> <a href="family.html">Ejerforening Family</a></li>
+                <li> <a href="grande.html">Ejerforening Grande</a></li>
+                <li><a href="large.html">Ejerforening Large</a></li>
+                <h4>Gensalg</h4>
+                <li> <a href="gensalg_family.html">Family</a></li>
+                <li> <a href="gensalg_large.html">Large</a></li>
 
                 <h4><a href="link.html">Alle stiftede foreninger</a></h4>
             </ul>
@@ -47,19 +48,21 @@
 
             <ul>
                 <h4><a href="destinationer.html">Destinationer</a></h4>
-                <li><a href="destionation_singleview.html?id=430">Sydspanien</a></li>
-                <li> <a href="destionation_singleview.html?ID">Rom</a></li>
-                <li> <a href="destionation_singleview.html?ID">Mallorca</a></li>
-                <li> <a href="destionation_singleview.html?ID">New York</a></li>
-                <li> <a href="destionation_singleview.html?ID">Toscana</a></li>
-                <li> <a href="destionation_singleview.html?ID">Chamonix</a></li>
-                <li> <a href="destionation_singleview.html?ID">Sydfrankrig</a></li>
-                <li> <a href="destionation_singleview.html?ID">Barcelona</a></li>
+                <li><a href="destinationer_singleview.html?id=430">Sydspanien</a></li>
+                <li> <a href="destinationer_singleview.html?id=429">Rom</a></li>
+                <li> <a href="destinationer_singleview.html?id=428">Mallorca</a></li>
+                <li> <a href="destinationer_singleview.html?id=426">Paris</a></li>
+                <li> <a href="destinationer_singleview.html?id=425">New York</a></li>
+                <li> <a href="destinationer_singleview.html?id=424">Toscana</a></li>
+                <li> <a href="destinationer_singleview.html?id=423">Chamonix</a></li>
+                <li> <a href="destinationer_singleview.html?id=422">Sydfrankrig</a></li>
+                <li> <a href="destinationer_singleview.html?id=378">Barcelona</a></li>
             </ul>
 
 
 
             <ul>
+                <h4><a href="konceptet.html">Bag 21-5 konceptet</a></h4>
                 <h4><a href="laer_21_5_at_kende.html">Lær 21-5 at kende</a></h4>
                 <h4><a href="faelleskab_i_foreningen.html">Fællesskab i foreningen</a></h4>
                 <h4><a href="fordeling_af_ugerne.html">Fordeling af ugerne</a></h4>
@@ -73,8 +76,6 @@
                 <h4><a href="skat.html">Skat</a></h4>
                 <h4><a href="financiering.html">Finansiering</a></h4>
                 <h4><a href="investering.html">Investering</a></h4>
-                <li> <a href="link.html">Langsigtet investering</a></li>
-                <li> <a href="link.html">Kortsigtet investering</a></li>
             </ul>
 
             <ul>
@@ -147,7 +148,7 @@
     </style>
 
 
-
+    <script src="script.js"></script>
     <script>
         document.addEventListener("DOMContentLoaded", hentData);
 
@@ -176,13 +177,6 @@
             document.querySelector(".titel").textContent = person.titel;
             document.querySelector(".email").textContent = person.email;
             document.querySelector("img").src = person.billede.guid;
-        }
-
-        document.querySelector(".mainmenu").addEventListener("click", dropDown)
-
-
-        function dropDown() {
-            document.querySelector(".dropdownmenu").classList.toggle("hide");
         }
 
     </script>

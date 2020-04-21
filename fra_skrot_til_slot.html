@@ -4,11 +4,12 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fællesskab i foreningen</title>
+    <title>Processen bag boligerne</title>
     <link rel="stylesheet" href="general_styling.css">
 </head>
 
 <body>
+
     <header>
         <ul class="mainmenu">
             <li>Boligerne</li>
@@ -92,7 +93,9 @@
 
         </div>
     </header>
-    <section id="faelleskab_i_foreningen"></section>
+
+    <section id="fra_skrot_til_slot"></section>
+
 
     <footer>
         <div class="footergrid">
@@ -116,34 +119,37 @@
         </div>
 
 
-    </footer>
 
 
-    <script>
-        document.addEventListener("DOMContentLoaded", start);
 
-        const url = `http://lauraragnars.dk/21-5/wordpress/wp-json/wp/v2/pages/385`;
+        <script>
+            document.addEventListener("DOMContentLoaded", start);
 
-        async function start() {
-            const respons = await fetch(url);
-            const json = await respons.json();
-            vis(json);
-        }
+            const url = `http://lauraragnars.dk/21-5/wordpress/wp-json/wp/v2/pages/473`;
 
-        function vis(data) {
-            console.log(data.content.rendered)
-            document.querySelector("section").innerHTML = data.content.rendered;
+            async function start() {
+                const respons = await fetch(url);
+                const json = await respons.json();
+                vis(json);
+            }
 
-
-        }
-
-        // MENUUUUUUU
-
-        document.querySelector(".mainmenu").addEventListener("click", dropDown)
+            function vis(data) {
+                console.log(data.content.rendered)
+                document.querySelector("#fra_skrot_til_slot").innerHTML = data.content.rendered;
 
 
-        function dropDown() {
-            document.querySelector(".dropdownmenu").classList.toggle("hide");
-        }
-    </script>
-</body></html>
+            }
+
+            // MENUUUUUUU
+
+            document.querySelector(".mainmenu").addEventListener("click", dropDown)
+
+
+            function dropDown() {
+                document.querySelector(".dropdownmenu").classList.toggle("hide");
+            }
+
+        </script>
+</body>
+
+</html>

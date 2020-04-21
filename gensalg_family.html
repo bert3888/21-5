@@ -4,9 +4,11 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fællesskab i foreningen</title>
+    <title>Ejerforening</title>
     <link rel="stylesheet" href="general_styling.css">
 </head>
+
+<style></style>
 
 <body>
     <header>
@@ -92,8 +94,10 @@
 
         </div>
     </header>
-    <section id="faelleskab_i_foreningen"></section>
 
+    <section id="Ejerforening_side">
+
+    </section>
     <footer>
         <div class="footergrid">
             <div class="col">
@@ -119,10 +123,11 @@
     </footer>
 
 
+
     <script>
         document.addEventListener("DOMContentLoaded", start);
 
-        const url = `http://lauraragnars.dk/21-5/wordpress/wp-json/wp/v2/pages/385`;
+        const url = `http://lauraragnars.dk/21-5/wordpress/wp-json/wp/v2/pages/467`;
 
         async function start() {
             const respons = await fetch(url);
@@ -137,6 +142,8 @@
 
         }
 
+
+
         // MENUUUUUUU
 
         document.querySelector(".mainmenu").addEventListener("click", dropDown)
@@ -146,4 +153,6 @@
             document.querySelector(".dropdownmenu").classList.toggle("hide");
         }
     </script>
-</body></html>
+</body>
+
+</html>

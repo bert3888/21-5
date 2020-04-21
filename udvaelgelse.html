@@ -4,9 +4,11 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fællesskab i foreningen</title>
+    <title>Ejerforening</title>
     <link rel="stylesheet" href="general_styling.css">
 </head>
+
+<style></style>
 
 <body>
     <header>
@@ -59,7 +61,7 @@
 
 
             <ul>
-                <h4><a href="konceptet.html">Bag 21-5 konceptet</a></h4>
+                <h4><a href="konceptet.html">Konceptet bag 21-5</a></h4>
                 <h4><a href="laer_21_5_at_kende.html">Lær 21-5 at kende</a></h4>
                 <h4><a href="faelleskab_i_foreningen.html">Fællesskab i foreningen</a></h4>
                 <h4><a href="fordeling_af_ugerne.html">Fordeling af ugerne</a></h4>
@@ -92,8 +94,10 @@
 
         </div>
     </header>
-    <section id="faelleskab_i_foreningen"></section>
 
+    <section id="udvaelgelse">
+
+    </section>
     <footer>
         <div class="footergrid">
             <div class="col">
@@ -119,10 +123,11 @@
     </footer>
 
 
+
     <script>
         document.addEventListener("DOMContentLoaded", start);
 
-        const url = `http://lauraragnars.dk/21-5/wordpress/wp-json/wp/v2/pages/385`;
+        const url = `http://lauraragnars.dk/21-5/wordpress/wp-json/wp/v2/pages/480`;
 
         async function start() {
             const respons = await fetch(url);
@@ -132,10 +137,12 @@
 
         function vis(data) {
             console.log(data.content.rendered)
-            document.querySelector("section").innerHTML = data.content.rendered;
+            document.querySelector("#udvaelgelse").innerHTML = data.content.rendered;
 
 
         }
+
+
 
         // MENUUUUUUU
 
@@ -145,5 +152,8 @@
         function dropDown() {
             document.querySelector(".dropdownmenu").classList.toggle("hide");
         }
+
     </script>
-</body></html>
+</body>
+
+</html>
