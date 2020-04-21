@@ -49,7 +49,7 @@ h1 {
     font-style: normal;
 
     text-align: left;
-    font-size: 0.8rem;
+    font-size: 1rem;
     margin-left: 15px;
     margin-right: 15px;
     padding-bottom: 15px;
@@ -62,7 +62,7 @@ h1 {
     font-style: normal;
 
     text-align: left;
-    font-size: 0.8rem;
+    font-size: 1rem;
     margin-left: 15px;
     margin-right: 15px;
     padding-bottom: 20px;
@@ -74,7 +74,7 @@ h1 {
     font-style: normal;
 
     text-align: left;
-    font-size: 0.8rem;
+    font-size: 1rem;
     margin-left: 35px;
     margin-right: 35px;
 
@@ -86,7 +86,7 @@ h1 {
     font-style: normal;
 
     text-align: left;
-    font-size: 0.8rem;
+    font-size: 1rem;
     margin-left: 35px;
     margin-right: 35px;
 
@@ -98,7 +98,7 @@ h1 {
     font-style: normal;
 
     text-align: left;
-    font-size: 0.8rem;
+    font-size: 1rem;
     margin-left: 35px;
     margin-right: 35px;
     padding-bottom: 20px;
@@ -111,7 +111,7 @@ h1 {
     font-style: normal;
 
     text-align: left;
-    font-size: 0.8rem;
+    font-size: 1rem;
     margin-left: 15px;
     margin-right: 15px;
     padding-bottom: 40px;
@@ -135,11 +135,38 @@ h1 {
 
 
 /*investering styling start MOBILE*/
-investering,
-h1 {
+#investering h1 {
+    font-family: georgia;
+    font-weight: lighter;
     text-align: center;
-    font-size: 3rem;
+    font-size: 3.5rem;
+    padding-top: 50px;
 }
+
+#investering h2 {
+    font-family: georgia;
+    font-weight: lighter;
+    text-align: center;
+    font-size: 1.3rem;
+    margin-left: 12px;
+    margin-right: 13px;
+    padding-bottom: 20px;
+}
+
+
+#investering .p1 {
+    font-family: futura-pt, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+
+    text-align: left;
+    font-size: 1rem;
+    margin-left: 15px;
+    margin-right: 15px;
+    padding-bottom: 15px;
+    padding-top: 15px;
+}
+
 
 /*investering styling slut*/
 
@@ -147,6 +174,10 @@ h1 {
 
 
 
-/*****************************MEDIAQUERY FOR DESKTOP START********************************/
+/*****************************MEDIAQUERY FOR DESKTOP START*******************************/
 
 @media only screen and (min-width:600px) {}
+
+@media only screen and (min-width:1024px) {}
+
+@media only screen and (min-width: 1280px) {}
