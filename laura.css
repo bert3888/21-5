@@ -1,0 +1,22 @@
+#bliv_medlem h2 {
+    text-align: left;
+    padding: 15px;
+}
+
+
+#bliv_medlem button {
+    margin: 15px;
+    font-family: georgia;
+    padding: 10px;
+    font-size: 0.8rem;
+    transition: 0.5s;
+
+}
+
+
+#bliv_medlem button:hover {
+    background-color: #3c4b6e;
+    color: white;
+    transition: 0.5s;
+
+}
