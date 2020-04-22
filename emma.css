@@ -49,14 +49,16 @@
 
 /*finansiering styling start MOBILE*/
 
+#finansiering li {
+    font-family: futura-pt, sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 1em;
+    list-style: number;
+    padding-left: 40px;
+    padding-right: 40px;
+
 }
-
-/*
-
-
-
-
-*/
 
 /*finansiering styling slut*/
 

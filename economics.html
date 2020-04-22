@@ -243,57 +243,58 @@
         </nav>
     </header>
 
-    <section id="economics"></section>
+    <h1 <section id="economics">
+        </section>
 
 
-    <footer>
-        <div class="footergrid">
-            <div class="col">
-                <div class="kontaktinfo"></div>
+        <footer>
+            <div class="footergrid">
+                <div class="col">
+                    <div class="kontaktinfo"></div>
+                </div>
+
+                <div class="col">
+                    <h3>Andet</h3>
+                    <a href="link.html">Nyheder</a>
+                    <a href="link.html">Presse</a>
+                    <a href="link.html">Cookie- og privatlivspolitik</a>
+                    <a href="link.html">Ofte stillede spørgsmål</a>
+                </div>
+                <div class="col">
+                    <div class="fb_icon"></div>
+                    <p>Besøg os på Facebook!</p>
+                    <div class="instagram_icon"></div>
+                    Brug #215moments
+                </div>
             </div>
 
-            <div class="col">
-                <h3>Andet</h3>
-                <a href="link.html">Nyheder</a>
-                <a href="link.html">Presse</a>
-                <a href="link.html">Cookie- og privatlivspolitik</a>
-                <a href="link.html">Ofte stillede spørgsmål</a>
-            </div>
-            <div class="col">
-                <div class="fb_icon"></div>
-                <p>Besøg os på Facebook!</p>
-                <div class="instagram_icon"></div>
-                Brug #215moments
-            </div>
-        </div>
 
-
-    </footer>
+        </footer>
 
 
 
 
 
 
-    <script>
-        document.addEventListener("DOMContentLoaded", start);
+        <script>
+            document.addEventListener("DOMContentLoaded", start);
 
-        const url = `http://lauraragnars.dk/21-5/wordpress/wp-json/wp/v2/pages/398`;
+            const url = `http://lauraragnars.dk/21-5/wordpress/wp-json/wp/v2/pages/398`;
 
-        async function start() {
-            const response = await fetch(url);
-            const json = await response.json();
-            visEconomics(json);
-        }
+            async function start() {
+                const response = await fetch(url);
+                const json = await response.json();
+                visEconomics(json);
+            }
 
-        function visEconomics(data) {
-            console.log(data.content.rendered)
-            document.querySelector("#economics").innerHTML = data.content.rendered;
-        }
+            function visEconomics(data) {
+                console.log(data.content.rendered)
+                document.querySelector("#economics").innerHTML = data.content.rendered;
+            }
 
-    </script>
+        </script>
 
-    <script src="script.js"></script>
+        <script src="script.js"></script>
 
 
 </body>
