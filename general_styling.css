@@ -37,12 +37,24 @@ header {
     font-family: georgia;
     color: black;
     margin: 0 auto;
+    font-family: futura pt;
+    width: 100%;
+    font-weight: 200;
+    background-color: lightgray;
+    text-transform: uppercase;
+    padding: 20px 0 20px 0;
+
+}
+
+header h4 {
+    font-weight: 500;
+}
+
+.desktop_nav {
+    position: relative;
     max-width: 1200px;
     width: 100%;
-    background-color: aliceblue;
-    padding: 20px 0 20px 0;
-    position: relative;
-
+    margin: auto;
 }
 
 ul {
@@ -63,17 +75,13 @@ header a {
     margin-top: 30px;
     padding: 10px 50px 50px 50px;
     background-color: white;
-    transform-origin: top left;
-    transition: transform .3s;
     position: absolute;
     width: 100%;
+    transform: translateY(-115%);
 
 }
 
-.hidden {
-    opacity: 0;
-    transform: translateY(-110%);
-}
+
 
 
 
@@ -91,6 +99,9 @@ ul {
     grid-template-columns: repeat(6, 17%);
     cursor: pointer;
     padding: 0 50px 0 50px;
+    max-width: 1200px;
+    width: 100%;
+    margin: auto;
 
 
 }
@@ -192,6 +203,31 @@ footer {
         opacity: 1;
     }
 }
+
+.slidedown,
+.slideop {
+    animation-name: slide_kf;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-fill-mode: both;
+}
+
+.slideop {
+    animation-direction: reverse;
+
+}
+
+@keyframes slide_kf {
+    0% {
+        transform: translateY(-115%);
+    }
+
+    100% {
+        transform: translateY(0%);
+    }
+}
+
+
 
 
 
