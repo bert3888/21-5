@@ -24,9 +24,21 @@
 
   // MENUUUUUUU
 
-  document.querySelector(".mainmenu").addEventListener("click", dropDown)
+  document.querySelector(".mainmenu").addEventListener("click", dropDownBitch)
+  const dropDown = document.querySelector(".dropdownmenu");
+
+  function dropDownBitch() {
+      console.log("dropDown")
+
+      if (dropDown.classList.contains("slidedown")) {
+          dropDown.classList.remove("slidedown")
+          dropDown.classList.add("slideop");
+
+      } else {
+          dropDown.classList.remove("slideop");
+          dropDown.classList.add("slidedown")
+      }
 
 
-  function dropDown() {
-      document.querySelector(".dropdownmenu").classList.toggle("hide");
+
   }
