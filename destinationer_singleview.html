@@ -9,6 +9,94 @@
 </head>
 
 <body>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+
+        img {
+            width: 100%;
+        }
+
+        main {
+            width: 50vw;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .carousel {
+            width: 100%;
+            height: 100%;
+        }
+
+        .the_container {
+            display: flex;
+            overflow-x: scroll;
+            scroll-snap-type: x mandatory;
+        }
+
+
+        .the_container section {
+            scroll-snap-align: start;
+            min-width: 100%;
+        }
+
+        .carousel_inner {
+            display: flex;
+        }
+
+        .navigation_container section {
+            height: 5vh;
+            display: inline-block;
+        }
+
+        .navigation_container img {
+            height: 100%;
+            /*            opacity: 0.5;*/
+            width: auto;
+
+            cursor: pointer;
+        }
+
+        .navigation_border {
+            /*
+            outline: 1px solid black;
+            outline-offset: -1px;
+*/
+            opacity: 0.5;
+        }
+
+        .backwards,
+        .forwards {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        .backwards p,
+        .forwards p {
+            z-index: 10;
+            position: absolute;
+        }
+
+        .forwards p {
+            margin-left: 20px;
+            font-size: 2.5em;
+        }
+
+        .backwards p {
+            margin-left: -50px;
+            font-size: 2.5em;
+
+        }
+
+    </style>
 
     <header>
         <ul class="mainmenu">
@@ -25,17 +113,19 @@
 
             <ul>
                 <h4>Processen bag boligerne</h4>
-                <li> <a href="link.html">Fra skrot til slot</a></li>
-                <li> <a href="link.html">Klargøring</a></li>
-                <li> <a href="link.html">Istandsættelse</a></li>
-                <li> <a href="link.html">Udvælgelse</a></li>
-                <li> <a href="link.html">Indreting</a></li>
+                <li> <a href="fra_skrot_til_slot.html">Fra skrot til slot</a></li>
+                <li> <a href="klargoring.html">Klargøring</a></li>
+                <li> <a href="Istandsaettelse.html">Istandsættelse</a></li>
+                <li> <a href="udvaelgelse.html">Udvælgelse</a></li>
+                <li> <a href="Indretning.html">Indreting</a></li>
 
                 <h4>Til salg lige nu</h4>
-                <li> <a href="link.html">Ejerforening Family</a></li>
-                <li> <a href="link.html">Ejerforening Grande</a></li>
-                <li><a href="link.html">Ejerforening Large</a></li>
-                <li> <a href="link.html">Gensalg</a></li>
+                <li> <a href="family.html">Ejerforening Family</a></li>
+                <li> <a href="grande.html">Ejerforening Grande</a></li>
+                <li><a href="large.html">Ejerforening Large</a></li>
+                <h4>Gensalg</h4>
+                <li> <a href="gensalg_family.html">Family</a></li>
+                <li> <a href="gensalg_large.html">Large</a></li>
 
                 <h4><a href="link.html">Alle stiftede foreninger</a></h4>
             </ul>
@@ -44,19 +134,21 @@
 
             <ul>
                 <h4><a href="destinationer.html">Destinationer</a></h4>
-                <li><a href="destionation_singleview.html?ID">Sydspanien</a></li>
-                <li> <a href="destionation_singleview.html?ID">Rom</a></li>
-                <li> <a href="destionation_singleview.html?ID">Mallorca</a></li>
-                <li> <a href="destionation_singleview.html?ID">New York</a></li>
-                <li> <a href="destionation_singleview.html?ID">Toscana</a></li>
-                <li> <a href="destionation_singleview.html?ID">Chamonix</a></li>
-                <li> <a href="destionation_singleview.html?ID">Sydfrankrig</a></li>
-                <li> <a href="destionation_singleview.html?ID">Barcelona</a></li>
+                <li><a href="destinationer_singleview.html?id=430">Sydspanien</a></li>
+                <li> <a href="destinationer_singleview.html?id=429">Rom</a></li>
+                <li> <a href="destinationer_singleview.html?id=428">Mallorca</a></li>
+                <li> <a href="destinationer_singleview.html?id=426">Paris</a></li>
+                <li> <a href="destinationer_singleview.html?id=425">New York</a></li>
+                <li> <a href="destinationer_singleview.html?id=424">Toscana</a></li>
+                <li> <a href="destinationer_singleview.html?id=423">Chamonix</a></li>
+                <li> <a href="destinationer_singleview.html?id=422">Sydfrankrig</a></li>
+                <li> <a href="destinationer_singleview.html?id=378">Barcelona</a></li>
             </ul>
 
 
 
             <ul>
+                <h4><a href="konceptet.html">Bag 21-5 konceptet</a></h4>
                 <h4><a href="laer_21_5_at_kende.html">Lær 21-5 at kende</a></h4>
                 <h4><a href="faelleskab_i_foreningen.html">Fællesskab i foreningen</a></h4>
                 <h4><a href="fordeling_af_ugerne.html">Fordeling af ugerne</a></h4>
@@ -70,8 +162,6 @@
                 <h4><a href="skat.html">Skat</a></h4>
                 <h4><a href="financiering.html">Finansiering</a></h4>
                 <h4><a href="investering.html">Investering</a></h4>
-                <li> <a href="link.html">Langsigtet investering</a></li>
-                <li> <a href="link.html">Kortsigtet investering</a></li>
             </ul>
 
             <ul>
@@ -92,10 +182,30 @@
         </div>
     </header>
 
-    <section id="destination_singleview">
+    <template>
+        <section class="section_til_billede">
+            <img class="carousel_imgs" src="" alt="">
+        </section>
+    </template>
+    <main>
+        <div class="carousel">
+            <div class="carousel_inner">
+                <div class="backwards">
+                    <p>&#8592;</p>
+                </div>
+                <div class="the_container">
+                </div>
+                <div class="forwards">
+                    <p>&#8594;</p>
+                </div>
+            </div>
+            <div class="navigation_container"></div>
+        </div>
+    </main>
 
+    <section id="destination_singleview">
         <article class="destination">
-            <img src="" alt="">
+            <!--            <img src="" alt="">-->
             <h2 class="navn"></h2>
             <p class="beskrivelse"></p>
         </article>
@@ -126,33 +236,33 @@
 
     </footer>
 
-    <style>
-        * {
-            box-sizing: border-box;
-        }
-
-        body {
-            margin: 0;
-        }
-
-
-        img {
-            width: 100%;
-        }
-
-    </style>
-
-
 
     <script>
-        document.addEventListener("DOMContentLoaded", hentData);
+        document.addEventListener("DOMContentLoaded", start);
 
-
+        "use strict"
+        const url = "http://lauraragnars.dk/21-5/wordpress/wp-json/wp/v2/destination/430";
+        let theJSON;
+        let numberOfPicsInCarousel;
+        let caroCurrentNum = 0;
         let urlParams = new URLSearchParams(window.location.search);
         let id = urlParams.get("id");
         let destination;
 
+        function start() {
+            hentJSON();
+            hentData();
+            document.querySelector(".forwards").addEventListener("click", forwards);
+            document.querySelector(".backwards").addEventListener("click", backwards);
 
+        }
+
+        async function hentJSON() {
+            const response = await fetch(url);
+            theJSON = await response.json();
+            console.log(theJSON);
+            buildCarousel();
+        }
 
         async function hentData() {
 
@@ -160,13 +270,69 @@
             destination = await jsonData.json();
             console.log(destination)
             visDestinationer();
+        }
 
+        function buildCarousel() {
+            numberOfPicsInCarousel = theJSON.billedgalleri.lenght;
+            theJSON.billedgalleri.forEach((billede, index) => {
+                const theClone = document.querySelector("template").cloneNode(true).content;
+                const secondClone = document.querySelector("template").cloneNode(true).content;
+                theClone.querySelector("img").src = billede.guid;
+                secondClone.querySelector("img").src = billede.guid;
+                secondClone.querySelector("section").dataset.myIndex = index;
+                document.querySelector(".the_container").appendChild(theClone);
+                document.querySelector(".navigation_container").appendChild(secondClone);
+            })
+
+            document.querySelector(".navigation_container section").classList.add("navigation_border");
+            document.querySelector(".the_container").addEventListener("scroll", scrollFunction)
+
+            document.querySelectorAll(".navigation_container section").forEach(each => {
+
+                each.addEventListener("click", navigationClick);
+            })
+
+        }
+
+        function scrollFunction() {
+            document.querySelectorAll(".navigation_container section").forEach(each => {
+
+                each.classList.remove("navigation_border");
+            })
+            // console.log("jeg sroller");
+            caroCurrentNum = Math.round(document.querySelector(".the_container").scrollLeft / document.querySelector(".carousel_imgs").width);
+            document.querySelector(`.navigation_container section:nth-child(${caroCurrentNum+1})`).classList.add("navigation_border");
+            console.log(caroCurrentNum);
+        }
+
+        function navigationClick(evt) {
+            console.log("evt", evt.currentTarget);
+            caroCurrentNum = evt.currentTarget.dataset.myIndex;
+            navigate();
+        }
+
+        function forwards() {
+            caroCurrentNum++;
+            navigate();
+        }
+
+        function backwards() {
+            caroCurrentNum--;
+            navigate();
+
+        }
+
+        function navigate() {
+            document.querySelector(".the_container").scrollTo({
+                left: caroCurrentNum * document.querySelector(".carousel_imgs").width,
+                behavior: "smooth"
+            })
         }
 
         function visDestinationer() {
             document.querySelector(".navn").textContent = destination.title.rendered;
             document.querySelector(".beskrivelse").innerHTML = destination.content.rendered;
-            document.querySelector("img").src = destination.billede.guid;
+            //            document.querySelector("img").src = destination.billede.guid;
         }
 
         document.querySelector(".mainmenu").addEventListener("click", dropDown)

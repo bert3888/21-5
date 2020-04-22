@@ -1,32 +1,44 @@
-   document.addEventListener("DOMContentLoaded", start);
+  // FOOTER
+
+  document.addEventListener("DOMContentLoaded", startFooter);
 
 
-   const link = "http://lauraragnars.dk/21-5/wordpress/wp-json/wp/v2/pages/410"
+  const linkFooter = "http://lauraragnars.dk/21-5/wordpress/wp-json/wp/v2/pages/410"
 
-   let footerData = []
+  let footerData = []
 
-   function start() {
-       hentData();
-   }
+  function startFooter() {
+      hentDataFooter();
+  }
 
-   async function hentData() {
-       const response = await fetch(link);
-       footerData = await response.json();
-       visData();
-   }
+  async function hentDataFooter() {
+      const response = await fetch(linkFooter);
+      footerData = await response.json();
+      visDataFooter();
+  }
 
-   function visData() {
-       document.querySelector(".kontaktinfo").innerHTML = footerData.content.rendered;
+  function visDataFooter() {
+      document.querySelector(".kontaktinfo").innerHTML = footerData.content.rendered;
 
-   }
+  }
+
+  // MENUUUUUUU
+
+  document.querySelector(".mainmenu").addEventListener("click", dropDownBitch)
+  const dropDown = document.querySelector(".dropdownmenu");
+
+  function dropDownBitch() {
+      console.log("dropDown")
+
+      if (dropDown.classList.contains("slidedown")) {
+          dropDown.classList.remove("slidedown")
+          dropDown.classList.add("slideop");
+
+      } else {
+          dropDown.classList.remove("slideop");
+          dropDown.classList.add("slidedown")
+      }
 
 
 
-   // MENUUUUUUU
-
-   document.querySelector(".mainmenu").addEventListener("click", dropDown)
-
-
-   function dropDown() {
-       document.querySelector(".dropdownmenu").classList.toggle("hide");
-   }
+  }
