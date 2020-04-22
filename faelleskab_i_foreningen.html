@@ -241,6 +241,8 @@
             </div>
         </nav>
     </header>
+
+    <h1 class="title"></h1>
     <section id="faelleskab_i_foreningen"></section>
 
     <footer>
@@ -282,28 +284,11 @@
         function vis(data) {
             console.log(data.content.rendered)
             document.querySelector("section").innerHTML = data.content.rendered;
+            document.querySelector(".title").innerHTML = data.title.rendered;
 
 
         }
-
-        //        // MENUUUUUUU
-        //
-        // document.querySelector(".mainmenu").addEventListener("click", dropDown)
-        //
-        //
-        // function dropDown() {
-        // document.querySelector(".dropdownmenu").classList.toggle("hide");
-        // }
-
-        // Mobile burgermenu
-
-        document.querySelector("#nav_icon").addEventListener("click", onClickMenu);
-
-        function onClickMenu() {
-            document.getElementById("nav_icon").classList.toggle("change");
-        }
-
     </script>
-</body>
 
-</html>
+    <script src="script.js"></script>
+</body></html>

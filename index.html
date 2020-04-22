@@ -245,9 +245,8 @@
         </nav>
     </header>
 
+    <img>
     <section id="forside">
-
-        <h1> HER KOMMER DER CONTENT TIL FORSIDE</h1>
     </section>
 
 
@@ -275,6 +274,39 @@
 
 
     </footer>
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", start);
+
+
+        const url = `http://lauraragnars.dk/21-5/wordpress/wp-json/wp/v2/pages/2602`;
+        const photosrc = `http://lauraragnars.dk/21-5/wordpress/wp-json/wp/v2/media?parent=2602`;
+
+        async function start() {
+            const respons = await fetch(url);
+            const json = await respons.json();
+            vis(json);
+            start2();
+        }
+
+        async function start2() {
+            const respons2 = await fetch(photosrc);
+            const json2 = await respons2.json();
+            vis2(json2);
+        }
+
+        function vis(data) {
+            console.log(data.content.rendered)
+            document.querySelector("section").innerHTML = data.content.rendered;
+
+        }
+
+        function vis2(data2) {
+            document.querySelector("img").src = data.guid.rendered;
+        }
+
+    </script>
 
 
     <script src="script.js"></script>

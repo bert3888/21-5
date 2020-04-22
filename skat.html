@@ -242,7 +242,7 @@
         </nav>
     </header>
 
-
+    <h1 class="title"></h1>
     <section id="skat"></section>
 
 
@@ -287,12 +287,10 @@
         function visSkat(data) {
             console.log(data.content.rendered)
             document.querySelector("#skat").innerHTML = data.content.rendered;
+            document.querySelector(".title").innerHTML = data.title.rendered;
         }
-
     </script>
 
     <script src="script.js"></script>
 
-</body>
-
-</html>
+</body></html>

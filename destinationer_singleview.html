@@ -339,11 +339,15 @@
         </nav>
     </header>
 
+    <h1 class="title"></h1>
+
+    <!--
     <section id="destination_singleview">
         <article class="destination">
             <h1 class="navn"></h1>
         </article>
     </section>
+-->
     <template>
         <section class="section_til_billede">
             <img class="carousel_imgs" src="" alt="">
@@ -485,8 +489,9 @@
         }
 
         function visDestinationer() {
-            document.querySelector(".navn").textContent = destination.title.rendered;
+            //            document.querySelector(".navn").textContent = destination.title.rendered;
             document.querySelector(".beskrivelse").innerHTML = destination.content.rendered;
+            document.querySelector(".title").innerHTML = destination.title.rendered;
             //            document.querySelector("img").src = destination.billede.guid;
         }
     </script>

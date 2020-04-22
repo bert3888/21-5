@@ -246,7 +246,7 @@
         </nav>
     </header>
 
-
+    <h1 class="title"></h1>
     <section id="finansiering"></section>
 
 
@@ -290,19 +290,8 @@
         function visFinansiering(data) {
             console.log(data.content.rendered)
             document.querySelector("#finansiering").innerHTML = data.content.rendered;
-        } <<
-        <<
-        <<
-        <
-        HEAD
-            ===
-            ===
-            =
-
-            >>>
-            >>>
-            >
-            origin / master
+            document.querySelector(".title").innerHTML = data.title.rendered;
+        }
 
     </script>
 

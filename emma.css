@@ -26,8 +26,6 @@
 
 /*skat styling start MOBILE*/
 
-
-
 #skat h3 {
     font-family: futura-pt, sans-serif;
     font-size: 2em;
@@ -49,14 +47,21 @@
 
 /*finansiering styling start MOBILE*/
 
+#finansiering li {
+    font-family: futura-pt, sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 1em;
+    list-style: number;
+    padding-left: 40px;
+    padding-right: 40px;
+
 }
 
-/*
-
-
-
-
-*/
+#finansiering h3 {
+    padding: 0;
+    margin: 0;
+}
 
 /*finansiering styling slut*/
 
@@ -71,6 +76,17 @@
 
 /*investering styling start MOBILE*/
 
+
+#investering ul {
+    font-family: futura-pt, sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 1em;
+    list-style: circle;
+    padding-left: 40px;
+    padding-right: 40px;
+
+}
 
 /*investering styling slut*/
 

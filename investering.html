@@ -245,7 +245,7 @@
         </nav>
     </header>
 
-
+    <h1 class="title"></h1>
     <section id="investering"></section>
 
 
@@ -290,6 +290,7 @@
         function visInvestering(data) {
             console.log(data.content.rendered)
             document.querySelector("#investering").innerHTML = data.content.rendered;
+            document.querySelector(".title").innerHTML = data.title.rendered;
         }
 
     </script>
