@@ -5,90 +5,200 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fællesskab i foreningen</title>
-    <link rel="stylesheet" href="general_styling.css">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+        }
+
+        @media only screen and (max-width: 600px) {
+            /* Menu Funktioner */
+
+            .multi_level,
+            .item ul,
+            .nav input[type="checkbox"] {
+                display: none;
+
+            }
+
+            #menu:checked~.multi_level,
+            .item input:checked~ul {
+                display: block;
+
+            }
+
+
+            /* Menu styling*/
+
+            .nav {
+                text-align: end;
+
+
+
+
+            }
+
+            .hovedpunkt {
+                width: 100vw;
+                height: 10vw;
+                background-color: darkgrey;
+            }
+
+
+            .nav ul,
+            .nav li,
+            label {
+                list-style-type: none;
+                text-decoration: none;
+            }
+
+            a {
+                text-decoration: none;
+                color: black;
+            }
+
+                {
+                transition-delay: 0.5s;
+
+            }
+
+        }
+
+    </style>
 </head>
 
 <body>
     <header>
-        <ul class="mainmenu">
-            <li>Boligerne</li>
-            <li>Destinationer</li>
-            <li>Konceptet bag 21-5</li>
-            <li>Økonomi, jura og skat</li>
-            <li>Om os</li>
-            <li>Kontakt</li>
-        </ul>
+        <div class="nav">
+            <input type="checkbox" id="menu">
+            <label for="menu">&#9776;</label>
 
-        <div class="dropdownmenu hide">
+            <div class="multi_level">
+                <div class="item">
+                    <input type="checkbox" id="A">
+                    <div class="hovedpunkt"><label for="A">Boligerne</label></div>
+                    <ul>
+                        <li>
+                            <div class="sub_item">
+                                <input type="checkbox" id="A-A">
+                                <div class="hovedpunkt"><label for="A-A">Processen bag boligerne</label></div>
 
-
-            <ul>
-                <h4>Processen bag boligerne</h4>
-                <li> <a href="link.html">Fra skrot til slot</a></li>
-                <li> <a href="link.html">Klargøring</a></li>
-                <li> <a href="link.html">Istandsættelse</a></li>
-                <li> <a href="link.html">Udvælgelse</a></li>
-                <li> <a href="link.html">Indreting</a></li>
-
-                <h4>Til salg lige nu</h4>
-                <li> <a href="link.html">Ejerforening Family</a></li>
-                <li> <a href="link.html">Ejerforening Grande</a></li>
-                <li><a href="link.html">Ejerforening Large</a></li>
-                <li> <a href="link.html">Gensalg</a></li>
-
-                <h4><a href="link.html">Alle stiftede foreninger</a></h4>
-            </ul>
+                                <ul>
+                                    <li>Processen bag boligerne</li>
+                                    <li> <a href="link.html">Fra skrot til slot</a></li>
+                                    <li> <a href="link.html">Klargøring</a></li>
+                                    <li> <a href="link.html">Istandsættelse</a></li>
+                                    <li> <a href="link.html">Udvælgelse</a></li>
+                                    <li> <a href="link.html">Indreting</a></li>
+                                </ul>
 
 
+                            </div>
 
-            <ul>
-                <h4><a href="destinationer.html">Destinationer</a></h4>
-                <li><a href="destionation_singleview.html?ID">Sydspanien</a></li>
-                <li> <a href="destionation_singleview.html?ID">Rom</a></li>
-                <li> <a href="destionation_singleview.html?ID">Mallorca</a></li>
-                <li> <a href="destionation_singleview.html?ID">New York</a></li>
-                <li> <a href="destionation_singleview.html?ID">Toscana</a></li>
-                <li> <a href="destionation_singleview.html?ID">Chamonix</a></li>
-                <li> <a href="destionation_singleview.html?ID">Sydfrankrig</a></li>
-                <li> <a href="destionation_singleview.html?ID">Barcelona</a></li>
-            </ul>
+                        <li>
+                            <div class="sub_item">
+                                <input type="checkbox" id="A-B">
+                                <input type="checkbox" id="A">
+                                <div class="hovedpunkt"><label for="A-B">Til salg lige nu</label> </div>
 
-
-
-            <ul>
-                <h4><a href="laer_21_5_at_kende.html">Lær 21-5 at kende</a></h4>
-                <h4><a href="faelleskab_i_foreningen.html">Fællesskab i foreningen</a></h4>
-                <h4><a href="fordeling_af_ugerne.html">Fordeling af ugerne</a></h4>
-                <h4><a href="kob_og_salg_af_andel.html">Køb og salg af andel</a></h4>
-                <h4><a href="faq.html">FAQ</a></h4>
-            </ul>
+                                <ul>
+                                    <li>Til salg lige nu</li>
+                                    <li> <a href="link.html">Ejerforening Family</a></li>
+                                    <li> <a href="link.html">Ejerforening Grande</a></li>
+                                    <li><a href="link.html">Ejerforening Large</a></li>
+                                    <li> <a href="gensalg.html">Gensalg</a></li>
+                                    <li><a href="link.html">Alle stiftede foreninger</a></li>
+                                </ul>
 
 
+                            </div>
+                        </li>
+                    </ul>
 
-            <ul>
-                <h4><a href="skat.html">Skat</a></h4>
-                <h4><a href="financiering.html">Finansiering</a></h4>
-                <h4><a href="investering.html">Investering</a></h4>
-                <li> <a href="link.html">Langsigtet investering</a></li>
-                <li> <a href="link.html">Kortsigtet investering</a></li>
-            </ul>
+                </div>
 
-            <ul>
-                <h4><a href="21-5_teamet.html">21-5 Teamet</a></h4>
-                <h4><a href="historien.html">Historien bag 21-5</a></h4>
-                <h4><a href="21-5_familier.html">Mød de andre 21-5 familier</a></h4>
-            </ul>
+                <div class="item">
+                    <input type="checkbox" id="B">
+                    <div class="hovedpunkt"><label for="B">Destinationer</label></div>
+                    <ul>
+                        <li><a href="destinationer.html">Destinationer</a></li>
+                        <li><a href="destionation_singleview.html?ID">Sydspanien</a></li>
+                        <li> <a href="destionation_singleview.html?ID">Rom</a></li>
+                        <li> <a href="destionation_singleview.html?ID">Mallorca</a></li>
+                        <li> <a href="destionation_singleview.html?ID">New York</a></li>
+                        <li> <a href="destionation_singleview.html?ID">Toscana</a></li>
+                        <li> <a href="destionation_singleview.html?ID">Chamonix</a></li>
+                        <li> <a href="destionation_singleview.html?ID">Sydfrankrig</a></li>
+                        <li> <a href="destionation_singleview.html?ID">Barcelona</a></li>
+                    </ul>
 
-            <ul>
-                <h4><a href="bliv_medlem.html">Bliv medlem af 21-5</a></h4>
-                <li> <a href="link.html">Book et kaffemøde</a></li>
-                <li> <a href="link.html">Orienteringsmøde</a></li>
-                <h4><a href="karriere.html">Karriere i 21-5</a></h4>
+                </div>
 
-            </ul>
+                <div class="item">
+                    <input type="checkbox" id="C">
+                    <div class="hovedpunkt"> <label for="C">Konceptet bag 21-5</label></div>
+                    <ul>
+                        <li><a href="laer_21_5_at_kende.html">Lær 21-5 at kende</a></li>
+                        <li><a href="faelleskab_i_foreningen.html">Fællesskab i foreningen</a></li>
+                        <li><a href="fordeling_af_ugerne.html">Fordeling af ugerne</a></li>
+                        <li><a href="kob_og_salg_af_andel.html">Køb og salg af andel</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                    </ul>
+                </div>
 
+                <div class="item">
+                    <input type="checkbox" id="D">
+                    <div class="hovedpunkt"><label for="D">Økonomi, jura og skat</label></div>
+                    <ul>
+                        <li><a href="skat.html">Skat</a></li>
+                        <li><a href="financiering.html">Finansiering</a></li>
+                        <li>
+                            <div class="sub_item">
+                                <input type="checkbox" id="D-A">
+                                <div class="hovedpunkt"> <label for="D-A">Investering</label></div>
 
-        </div>
+                                <ul>
+                                    <li> <a href="link.html">Langsigtet investering</a></li>
+                                    <li> <a href="link.html">Kortsigtet investering</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="item">
+                    <input type="checkbox" id="E">
+                    <div class="hovedpunkt"> <label for="E">Om oss</label> </div>
+                    <ul>
+                        <li><a href="21-5_teamet.html">21-5 Teamet</a></li>
+                        <li><a href="historien.html">Historien bag 21-5</a></li>
+                        <li><a href="21-5_familier.html">Mød de andre 21-5 familier</a></li>
+                    </ul>
+                </div>
+
+                <div class="item">
+                    <input type="checkbox" id="F">
+                    <div class="hovedpunkt"> <label for="F">Kontakt</label>
+                        <ul>
+                            <li>
+                                <div class="sub_item">
+                                    <input type="checkbox" id="E-A">
+                                    <div class="hovedpunkt"><label for="E-A">Bliv medlem af 21-5</label> </div>
+
+                                    <ul>
+                                        <li> <a href="link.html">Book et kaffemøde</a></li>
+                                        <li> <a href="link.html">Orienteringsmøde</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li><a href="karriere.html">Karriere i 21-5</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
     </header>
 
     <section id="faelleskab_i_foreningen"></section>
@@ -144,5 +254,8 @@
         function dropDown() {
             document.querySelector(".dropdownmenu").classList.toggle("hide");
         }
+
     </script>
-</body></html>
+</body>
+
+</html>

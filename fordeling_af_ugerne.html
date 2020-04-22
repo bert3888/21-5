@@ -6,6 +6,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fordeling af ugerne</title>
     <link rel="stylesheet" href="general_styling.css">
+
+    <style>
+        header {
+            font-family: georgia;
+            color: black;
+            margin: 0 auto;
+            max-width: 1100px;
+        }
+
+        header a {
+            color: black;
+        }
+
+        .dropdownmenu {
+            display: flex;
+        }
+
+        .hide {
+            display: none;
+        }
+
+        ul {
+            list-style-type: none;
+        }
+
+        .mainmenu li {
+            display: inline-block;
+            float: left;
+            margin-right: 1px;
+            font-size: 1.1rem;
+            cursor: pointer;
+        }
+
+    </style>
 </head>
 
 <body>
@@ -145,5 +179,8 @@
         function dropDown() {
             document.querySelector(".dropdownmenu").classList.toggle("hide");
         }
+
     </script>
-</body></html>
+</body>
+
+</html>
