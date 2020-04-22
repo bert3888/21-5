@@ -27,7 +27,10 @@
   document.querySelector(".mainmenu").addEventListener("click", dropDownBitch)
   const dropDown = document.querySelector(".dropdownmenu");
 
+
   function dropDownBitch() {
+      console.log("dropdownbitch")
+
       console.log("dropDown")
 
       if (dropDown.classList.contains("slidedown")) {
@@ -39,6 +42,14 @@
           dropDown.classList.add("slidedown")
       }
 
+  }
 
+  // Mobile burgermenu
+
+  document.querySelector("#nav_icon").addEventListener("click", onClickMenu);
+
+  function onClickMenu() {
+      document.getElementById("nav_icon").classList.toggle("change");
+      document.querySelector("header").classList.toggle("bgcolor");
 
   }

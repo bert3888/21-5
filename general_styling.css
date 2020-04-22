@@ -86,15 +86,6 @@ h4 {
 
 
 
-
-
-
-
-
-
-
-
-
 /* ----- LINKS --------*/
 
 a {
@@ -106,94 +97,190 @@ a:hover {
 }
 
 /* ------------- HEADER OG FOOTER ---------------*/
+/*burgermenu*/
 
-/*header*/
+.mobilelogo {
+    filter: invert(1);
+    width: 15vw;
+    position: absolute;
+    left: 42.5vw;
+
+}
 
 header {
-    font-family: georgia;
-    color: black;
-    margin: 0 auto;
-    font-family: futura pt;
-    width: 100%;
-    font-weight: 200;
-    background-color: lightgray;
-    text-transform: uppercase;
-    padding: 20px 0 20px 0;
-
-}
-
-header h4 {
-    font-weight: 500;
-    font-family: futura pt;
-    padding: 0;
-}
-
-header a {
-    font-family: futura pt;
-    padding: 0;
-}
-
-.desktop_nav {
-    position: relative;
-    max-width: 1200px;
-    width: 100%;
-    margin: auto;
-}
-
-ul {
-    margin: 0;
-    padding: 0;
-
-}
-
-
-
-header a {
-    color: black;
-}
-
-.dropdownmenu {
-    display: grid;
-    grid-template-columns: repeat(6, 17%);
-    margin-top: 30px;
-    padding: 10px 50px 50px 50px;
     background-color: white;
-    position: absolute;
+    color: white;
+    margin: 0;
     width: 100%;
-    transform: translateY(-115%);
-
+    height: auto;
+    overflow: hidden;
+    font-family: futura pt;
+    text-transform: uppercase;
+    font-weight: 300;
 }
 
+.bgcolor {
+    background-color: #3c4b6e;
+}
 
+header img {
+    filter: invert(1);
+}
 
+.burgermenu {
+    display: block;
+}
 
+.desktop_nav,
+.mainmenu {
+    display: none;
+}
 
-.hide {
+/* Menu Funktioner */
+
+.multi_level,
+.item ul,
+.burgermenu input,
+[type="checkbox"] {
     display: none;
 
+
 }
 
-ul {
+#menu:checked ~ .multi_level,
+.item input:checked ~ ul {
+    display: block;
+
+}
+
+/* Menu styling*/
+
+.burgermenu {
+    text-align: right;
+}
+
+.hovedpunkt {
+    width: 100vw;
+    height: 15vw;
+}
+
+.hovedpunkt label {
+    font-size: 1.5rem;
+    font-weight: 300;
+}
+
+.multi_level {
+    margin: 5vw;
+    vertical-align: middle;
+    text-align: left;
+}
+
+
+.burgermenu ul,
+.burgermenu li,
+label {
     list-style-type: none;
+    text-decoration: none;
+    vertical-align: middle;
+    line-height: 10vw;
+    padding: 0vw 0vw;
+    font-size: 1rem;
+    font-weight: 100;
 }
 
-.mainmenu {
-    display: grid;
-    grid-template-columns: repeat(6, 17%);
-    cursor: pointer;
-    padding: 0 50px 0 50px;
-    max-width: 1200px;
+.item ul {
+    padding: 0 5vw;
+
+}
+
+.item li {
+    padding: 2vw 0vw;
+
+}
+
+a {
+    text-decoration: none;
+    color: white;
+
+}
+
+
+/* Pil */
+
+.pil {
+    width: 10vw;
+    height: 10vw;
+    vertical-align: middle;
+    float: right;
+    z-index: 0;
+}
+
+.item input + .pil {
+    transform: rotate(0deg);
+    transition: 0.5s;
+}
+
+.item input:checked + .pil {
+    transform: rotate(-180deg);
+    transition: 0.5s;
+}
+
+/*  Burgermenu animation */
+
+#nav_icon {
+    width: 10vw;
+    height: 10vw;
+    margin: 4vw 2vw 0vw 2vw;
+    position: relative;
+    left: 83vw;
+    top: 5.5vw
+}
+
+.bar {
+    height: 0.8vw;
     width: 100%;
-    margin: auto;
-
+    background-color: #3c4b6e;
+    display: block;
+    border-radius: 3px;
+    transition: 0.4s ease;
 
 }
+
+
+
+#bar1 {
+    transform: translateY(-8px)
+}
+
+#bar3 {
+    transform: translateY(8px)
+}
+
+.change .bar {
+    background-color: white;
+}
+
+.change #bar1 {
+    transform: translateY(8px) rotateZ(-45deg);
+
+}
+
+.change #bar3 {
+    transform: translateY(-0px) rotateZ(45deg);
+}
+
+.change #bar2 {
+    opacity: 0;
+}
+
+
+
 
 /*footer*/
 
 footer {
     width: 100vw;
-    background-color: black;
+    background-color: #3c4b6e;
     color: white;
     font-family: georgia, serif;
     font-weight: 100;
@@ -201,7 +288,7 @@ footer {
 }
 
 .col {
-    background-color: black;
+    background-color: #3c4b6e;
     padding: 20px;
     margin: 20px;
 
@@ -246,7 +333,7 @@ footer {
 
     100% {
         opacity: 0;
-        display: hide;
+        display: none;
     }
 }
 
@@ -314,10 +401,137 @@ footer {
 
 
 
+
 /* ------------- MEDIAQUIRES ---------------*/
 @media only screen and (min-width:600px) {
     .footergrid {
         grid-template-columns: repeat(auto-fill, minmax(33%, 1fr));
+    }
+}
+
+@media only screen and (min-width:800px) {
+    /* ------------- HEADER OG FOOTER ---------------*/
+
+    .desktop_nav,
+    .mainmenu {
+        display: block;
+    }
+
+    .burgermenu {
+        display: none;
+    }
+
+    /*
+    .desktop_nav {
+        display: block;
+    }
+
+    .mainmenu {
+        display: block;
+    }
+
+
+*/
+    .desktoplogo {
+        filter: invert(1);
+        width: 60px;
+        height: auto;
+        position: absolute;
+        left: 1.5vw;
+        top: 1.5vw;
+    }
+
+
+    /*header*/
+
+    header {
+        font-family: georgia;
+        color: #3c4b6e;
+        margin: 0 auto;
+        font-family: futura pt;
+        width: 100%;
+        font-weight: 200;
+
+        background-color: white;
+        text-transform: uppercase;
+        padding: 20px 0 20px 0;
+        overflow: visible;
+
+
+    }
+
+    header h4 {
+        font-weight: 500;
+        font-family: futura pt;
+        padding: 0;
+        text-align: left;
+    }
+
+    header a {
+        font-family: futura pt;
+        padding: 0;
+        text-align: left;
+
+    }
+
+    header li {
+        font-weight: 300;
+    }
+
+    .desktop_nav {
+        position: relative;
+        max-width: 1200px;
+        width: 100%;
+        margin: auto;
+        height: 100%;
+    }
+
+    ul {
+        margin: 0;
+        padding: 0;
+
+    }
+
+
+
+    header a {
+        color: black;
+    }
+
+    .dropdownmenu {
+        display: grid;
+        grid-template-columns: repeat(6, 17%);
+        margin-top: 30px;
+        padding: 10px 50px 50px 50px;
+        background-color: white;
+        position: absolute;
+        width: 100%;
+        transform: translateY(-115%);
+        z-index: 100000;
+        /*        background-color: #3c4b6e;
+ */
+    }
+
+
+    .hide {
+        display: none;
+
+    }
+
+    ul {
+        list-style-type: none;
+    }
+
+    .mainmenu {
+        display: grid;
+        grid-template-columns: repeat(6, 17%);
+        cursor: pointer;
+        padding: 20px 50px 0 50px;
+        max-width: 1200px;
+        width: 100%;
+        margin: auto;
+
+
     }
 
 }
