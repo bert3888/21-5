@@ -17,6 +17,19 @@ section {
     padding: 20px;
 }
 
+/* Layoutstyling */
+
+#faelleskab_i_foreningen {
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.wp-block-group {
+    flex-grow: 1;
+    flex-basis: 400px;
+}
+
 /* -------- STYLING TIL TEKSTERRRRRRRRRRRRRR -----------*/
 
 p {
