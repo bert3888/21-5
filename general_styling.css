@@ -96,6 +96,13 @@ header {
 
 header h4 {
     font-weight: 500;
+    font-family: futura pt;
+    padding: 0;
+}
+
+header a {
+    font-family: futura pt;
+    padding: 0;
 }
 
 .desktop_nav {

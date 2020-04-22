@@ -71,10 +71,10 @@
 
 
                 <ul class="menu_jura">
-                    <h4><a href="economics.html">Økonomi</a></h4>
                     <h4><a href="skat.html">Skat</a></h4>
                     <h4><a href="financiering.html">Finansiering</a></h4>
                     <h4><a href="investering.html">Investering</a></h4>
+                    <h4><a href="economics.html">Økonomi</a></h4>
                 </ul>
 
                 <ul class="menu_omos">
@@ -119,27 +119,30 @@
             </div>
         </div>
 
+    </footer>
 
 
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", start);
+
+        const url = `http://lauraragnars.dk/21-5/wordpress/wp-json/wp/v2/pages/473`;
+
+        async function start() {
+            const respons = await fetch(url);
+            const json = await respons.json();
+            vis(json);
+        }
+
+        function vis(data) {
+            console.log(data.content.rendered)
+            document.querySelector("#fra_skrot_til_slot").innerHTML = data.content.rendered;
 
 
-        <script>
-            document.addEventListener("DOMContentLoaded", start);
+        }
 
-            const url = `http://lauraragnars.dk/21-5/wordpress/wp-json/wp/v2/pages/473`;
+    </script>
 
-            async function start() {
-                const respons = await fetch(url);
-                const json = await respons.json();
-                vis(json);
-            }
+</body>
 
-            function vis(data) {
-                console.log(data.content.rendered)
-                document.querySelector("#fra_skrot_til_slot").innerHTML = data.content.rendered;
-
-
-            }
-        </script>
-        <script src="script.js"></script>
-</body></html>
+</html>
