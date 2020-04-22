@@ -17,6 +17,10 @@ section {
     padding: 20px;
 }
 
+.section_til_billede {
+    padding: 0px;
+}
+
 /* Layoutstyling */
 
 section {
