@@ -25,6 +25,16 @@
             width: 100%;
         }
 
+        .beskrivelse {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .destination {
+            margin-left: auto;
+            margin-right: auto;
+        }
+
         main {
             width: 50vw;
             margin-left: auto;
@@ -92,11 +102,10 @@
         }
 
         .backwards p {
-            margin-left: -50px;
+            margin-left: -80px;
             font-size: 2.5em;
 
         }
-
     </style>
 
     <header>
@@ -330,7 +339,11 @@
         </nav>
     </header>
 
-
+    <section id="destination_singleview">
+        <article class="destination">
+            <h1 class="navn"></h1>
+        </article>
+    </section>
     <template>
         <section class="section_til_billede">
             <img class="carousel_imgs" src="" alt="">
@@ -355,7 +368,7 @@
     <section id="destination_singleview">
         <article class="destination">
             <!--            <img src="" alt="">-->
-            <h2 class="navn"></h2>
+            <!--            <h2 class="navn"></h2>-->
             <p class="beskrivelse"></p>
         </article>
 
@@ -476,10 +489,7 @@
             document.querySelector(".beskrivelse").innerHTML = destination.content.rendered;
             //            document.querySelector("img").src = destination.billede.guid;
         }
-
     </script>
 
 
-</body>
-
-</html>
+</body></html>
