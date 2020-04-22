@@ -25,6 +25,15 @@ section {
 
 }
 
+img {
+    width: 100%;
+    padding: 0;
+}
+
+figure {
+    margin: 0;
+}
+
 .wp-block-group {
     flex-grow: 1;
     flex-basis: 400px;
