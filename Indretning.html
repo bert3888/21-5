@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ejerforening</title>
     <link rel="stylesheet" href="general_styling.css">
+    <link rel="stylesheet" href="https://use.typekit.net/win1jok.css">
+
 </head>
 
 
@@ -248,7 +250,9 @@
             </div>
         </nav>
     </header>
-    <section></section>
+    <h1 class="title"></h1>
+
+    <section id="Indretning_side"></section>
 
     <footer>
         <div class="footergrid">
@@ -291,12 +295,10 @@
         function vis(data) {
             console.log(data.content.rendered)
             document.querySelector("section").innerHTML = data.content.rendered;
+            document.querySelector(".title").innerHTML = data.title.rendered;
 
 
         }
-
     </script>
 
-</body>
-
-</html>
+</body></html>

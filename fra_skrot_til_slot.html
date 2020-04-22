@@ -242,6 +242,8 @@
             </div>
         </nav>
     </header>
+    <h1 class="title"></h1>
+
     <section id="fra_skrot_til_slot"></section>
 
 
@@ -284,12 +286,10 @@
         function vis(data) {
             console.log(data.content.rendered)
             document.querySelector("#fra_skrot_til_slot").innerHTML = data.content.rendered;
+            document.querySelector(".title").innerHTML = data.title.rendered;
 
 
         }
-
     </script>
 
-</body>
-
-</html>
+</body></html>
