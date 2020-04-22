@@ -43,15 +43,17 @@ h2 {
 }
 
 h3 {
-    padding: 15px;
     font-family: georgia;
     font-weight: lighter;
+    text-align: center;
+    padding: 15px;
 }
 
 h4 {
-    padding: 15px;
     font-family: georgia;
     font-weight: lighter;
+    text-align: center;
+    padding: 15px;
 }
 
 
