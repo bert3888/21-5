@@ -5,6 +5,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fællesskab i foreningen</title>
+    <link rel="stylesheet" href="general_styling.css">
+    <link rel="stylesheet" href="https://use.typekit.net/win1jok.css">
     <style>
         * {
             box-sizing: border-box;
@@ -14,97 +16,73 @@
             margin: 0;
         }
 
+        header {
+            width: 100%;
+            height: auto;
+            overflow: hidden;
+        }
+
         @media only screen and (max-width: 600px) {
             /* Menu Funktioner */
 
             .multi_level,
             .item ul,
-            .nav input[type="checkbox"] {
+            .nav input,
+            [type="checkbox"] {
                 display: none;
 
-<<<<<<< HEAD
+
             }
 
             #menu:checked~.multi_level,
             .item input:checked~ul {
                 display: block;
-=======
-            <ul>
-                <h4>Processen bag boligerne</h4>
-                <li> <a href="fra_skrot_til_slot.html">Fra skrot til slot</a></li>
-                <li> <a href="klargoring.html">Klargøring</a></li>
-                <li> <a href="Istandsaettelse.html">Istandsættelse</a></li>
-                <li> <a href="udvaelgelse.html">Udvælgelse</a></li>
-                <li> <a href="Indretning.html">Indreting</a></li>
-
-                <h4>Til salg lige nu</h4>
-                <li> <a href="family.html">Ejerforening Family</a></li>
-                <li> <a href="grande.html">Ejerforening Grande</a></li>
-                <li><a href="large.html">Ejerforening Large</a></li>
-                <h4>Gensalg</h4>
-                <li> <a href="gensalg_family.html">Family</a></li>
-                <li> <a href="gensalg_large.html">Large</a></li>
->>>>>>> origin/master
 
             }
 
-
             /* Menu styling*/
 
-<<<<<<< HEAD
             .nav {
-                text-align: end;
-
-
-
-=======
-            <ul>
-                <h4><a href="destinationer.html">Destinationer</a></h4>
-                <li><a href="destinationer_singleview.html?id=430">Sydspanien</a></li>
-                <li> <a href="destinationer_singleview.html?id=429">Rom</a></li>
-                <li> <a href="destinationer_singleview.html?id=428">Mallorca</a></li>
-                <li> <a href="destinationer_singleview.html?id=426">Paris</a></li>
-                <li> <a href="destinationer_singleview.html?id=425">New York</a></li>
-                <li> <a href="destinationer_singleview.html?id=424">Toscana</a></li>
-                <li> <a href="destinationer_singleview.html?id=423">Chamonix</a></li>
-                <li> <a href="destinationer_singleview.html?id=422">Sydfrankrig</a></li>
-                <li> <a href="destinationer_singleview.html?id=378">Barcelona</a></li>
-            </ul>
-
-
-
-            <ul>
-                <h4><a href="konceptet.html">Bag 21-5 konceptet</a></h4>
-                <h4><a href="laer_21_5_at_kende.html">Lær 21-5 at kende</a></h4>
-                <h4><a href="faelleskab_i_foreningen.html">Fællesskab i foreningen</a></h4>
-                <h4><a href="fordeling_af_ugerne.html">Fordeling af ugerne</a></h4>
-                <h4><a href="kob_og_salg_af_andel.html">Køb og salg af andel</a></h4>
-                <h4><a href="faq.html">FAQ</a></h4>
-            </ul>
->>>>>>> origin/master
-
+                text-align: right;
             }
 
             .hovedpunkt {
                 width: 100vw;
-                height: 10vw;
-                background-color: darkgrey;
+                height: 15vw;
             }
 
-<<<<<<< HEAD
-=======
-            <ul>
-                <h4><a href="skat.html">Skat</a></h4>
-                <h4><a href="financiering.html">Finansiering</a></h4>
-                <h4><a href="investering.html">Investering</a></h4>
-            </ul>
->>>>>>> origin/master
+            .hovedpunkt label {
+                font-size: 1rem;
+                font-weight: 900;
+            }
+
+            .multi_level {
+                margin: 5vw;
+                vertical-align: middle;
+                text-align: left;
+            }
+
 
             .nav ul,
             .nav li,
             label {
                 list-style-type: none;
                 text-decoration: none;
+                vertical-align: middle;
+                line-height: 10vw;
+                padding: 0vw 0vw;
+                font-size: 0.9rem;
+                font-weight: 100;
+            }
+
+            .item ul {
+                padding: 0 5vw;
+
+            }
+
+            .item li {
+                padding: 2vw 0vw;
+
             }
 
             a {
@@ -112,13 +90,76 @@
                 color: black;
             }
 
-                {
-                transition-delay: 0.5s;
+
+            /* Pil */
+
+            .pil {
+                width: 10vw;
+                height: 10vw;
+                vertical-align: middle;
+                float: right;
+                z-index: 0;
+            }
+
+            .item input+.pil {
+                transform: rotate(0deg);
+                transition: 0.5s;
+            }
+
+            .item input:checked+.pil {
+                transform: rotate(-180deg);
+                transition: 0.5s;
+            }
+
+            /*  Burgermenu animation */
+
+            #nav_icon {
+                width: 10vw;
+                height: 8vw;
+                margin: 4vw 2vw 0vw 2vw;
+                position: relative;
+                left: 83vw;
 
             }
 
-        }
+            .bar {
+                height: 0.6vw;
+                width: 100%;
+                background-color: black;
+                display: block;
+                border-radius: 3px;
+                transition: 0.4s ease;
+            }
 
+            #bar1 {
+                transform: translateY(-6px)
+            }
+
+            #bar3 {
+                transform: translateY(6px)
+            }
+
+            /*
+            .change .bar {
+            background-color: white;
+            }
+*/
+
+            .change #bar1 {
+                transform: translateY(4px) rotateZ(-45deg);
+
+            }
+
+            .change #bar3 {
+                transform: translateY(-0px) rotateZ(45deg);
+            }
+
+            .change #bar2 {
+                opacity: 0;
+            }
+
+
+        }
     </style>
 </head>
 
@@ -126,11 +167,16 @@
     <header>
         <div class="nav">
             <input type="checkbox" id="menu">
-            <label for="menu">&#9776;</label>
+            <div id="nav_icon"><label for="menu">
+                    <div id="bar1" class="bar"></div>
+                    <div id="bar2" class="bar"></div>
+                    <div id="bar3" class="bar"></div>
+                </label></div>
 
             <div class="multi_level">
                 <div class="item">
                     <input type="checkbox" id="A">
+                    <img src="billeder/21_5_pil.svg" class="pil">
                     <div class="hovedpunkt"><label for="A">Boligerne</label></div>
                     <ul>
                         <li>
@@ -174,6 +220,7 @@
 
                 <div class="item">
                     <input type="checkbox" id="B">
+                    <img src="billeder/21_5_pil.svg" class="pil">
                     <div class="hovedpunkt"><label for="B">Destinationer</label></div>
                     <ul>
                         <li><a href="destinationer.html">Destinationer</a></li>
@@ -191,6 +238,7 @@
 
                 <div class="item">
                     <input type="checkbox" id="C">
+                    <img src="billeder/21_5_pil.svg" class="pil">
                     <div class="hovedpunkt"> <label for="C">Konceptet bag 21-5</label></div>
                     <ul>
                         <li><a href="laer_21_5_at_kende.html">Lær 21-5 at kende</a></li>
@@ -203,6 +251,7 @@
 
                 <div class="item">
                     <input type="checkbox" id="D">
+                    <img src="billeder/21_5_pil.svg" class="pil">
                     <div class="hovedpunkt"><label for="D">Økonomi, jura og skat</label></div>
                     <ul>
                         <li><a href="skat.html">Skat</a></li>
@@ -223,6 +272,7 @@
 
                 <div class="item">
                     <input type="checkbox" id="E">
+                    <img src="billeder/21_5_pil.svg" class="pil">
                     <div class="hovedpunkt"> <label for="E">Om oss</label> </div>
                     <ul>
                         <li><a href="21-5_teamet.html">21-5 Teamet</a></li>
@@ -233,7 +283,8 @@
 
                 <div class="item">
                     <input type="checkbox" id="F">
-                    <div class="hovedpunkt"> <label for="F">Kontakt</label>
+                    <img src="billeder/21_5_pil.svg" class="pil">
+                    <div class="hovedpunkt"><label for="F">Kontakt</label>
                         <ul>
                             <li>
                                 <div class="sub_item">
@@ -251,6 +302,7 @@
                     </div>
                 </div>
             </div>
+        </div>
     </header>
     <section id="faelleskab_i_foreningen"></section>
 
@@ -297,16 +349,21 @@
 
         }
 
-        // MENUUUUUUU
+        //        // MENUUUUUUU
+        //
+        // document.querySelector(".mainmenu").addEventListener("click", dropDown)
+        //
+        //
+        // function dropDown() {
+        // document.querySelector(".dropdownmenu").classList.toggle("hide");
+        // }
 
-        document.querySelector(".mainmenu").addEventListener("click", dropDown)
+        // Mobile burgermenu
 
+        document.querySelector("#nav_icon").addEventListener("click", onClickMenu);
 
-        function dropDown() {
-            document.querySelector(".dropdownmenu").classList.toggle("hide");
+        function onClickMenu() {
+            document.getElementById("nav_icon").classList.toggle("change");
         }
-
     </script>
-</body>
-
-</html>
+</body></html>

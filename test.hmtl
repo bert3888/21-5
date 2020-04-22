@@ -1,0 +1,63 @@
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+        }
+
+        @media only screen and (max-width: 600px) {
+            /* Menu Funktioner */
+
+            .multi_level,
+            .item ul,
+            .nav input[type="checkbox"] {
+                display: none;
+
+            }
+
+            #menu:checked~.multi_level,
+            .item input:checked~ul {
+                display: block;
+
+            }
+
+
+            /* Menu styling*/
+
+            .nav {
+                text-align: end;
+
+
+
+
+            }
+
+            .hovedpunkt {
+                width: 100vw;
+                height: 10vw;
+                background-color: darkgrey;
+            }
+
+
+            .nav ul,
+            .nav li,
+            label {
+                list-style-type: none;
+                text-decoration: none;
+            }
+
+            a {
+                text-decoration: none;
+                color: black;
+            }
+
+                {
+                transition-delay: 0.5s;
+
+            }
+
+        }
+
+    </style>
