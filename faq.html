@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FAQ</title>
     <link rel="stylesheet" href="general_styling.css">
+    <link rel="stylesheet" href="https://use.typekit.net/win1jok.css">
 </head>
 
 <body>
@@ -239,7 +240,8 @@
             </div>
         </nav>
     </header>
-    <p>Her kommer der spørgsmål.</p>
+
+    <h1 class="title"></h1>
 
     <section id="faq"></section>
 
@@ -281,11 +283,11 @@
         function vis(data) {
             console.log(data.content.rendered)
             document.querySelector("section").innerHTML = data.content.rendered;
+            document.querySelector(".title").innerHTML = data.title.rendered;
 
 
         }
-
     </script>
-</body>
 
-</html>
+    <script src="script.js"></script>
+</body></html>

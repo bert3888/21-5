@@ -399,7 +399,16 @@ footer {
 
 
 
+/* -------- STYLING TIL FORSIDE -----------*/
 
+
+
+#forside .wp-block-quote {
+    font-size: 1.5rem;
+    text-align: center;
+    margin-top: 0vw;
+    margin-bottom: 0vw;
+}
 
 
 /* ------------- MEDIAQUIRES ---------------*/
@@ -445,10 +454,9 @@ footer {
     /*header*/
 
     header {
-        font-family: georgia;
+        font-family: futura pt;
         color: #3c4b6e;
         margin: 0 auto;
-        font-family: futura pt;
         width: 100%;
         font-weight: 200;
 
