@@ -275,6 +275,9 @@
             </div>
         </nav>
     </header>
+
+
+    <h1 class="title"></h1>
     <section id="fordeling_af_ugerne">
     </section>
 
@@ -317,11 +320,11 @@
         function vis(data) {
             console.log(data.content.rendered)
             document.querySelector("section").innerHTML = data.content.rendered;
+            document.querySelector(".title").innerHTML = data.title.rendered;
 
 
         }
-
     </script>
-</body>
 
-</html>
+    <script src="script.js"></script>
+</body></html>

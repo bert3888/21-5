@@ -7,6 +7,7 @@
     <title>Køb og salg af andel
     </title>
     <link rel="stylesheet" href="general_styling.css">
+    <link rel="stylesheet" href="https://use.typekit.net/win1jok.css">
 </head>
 
 <body>
@@ -240,6 +241,7 @@
             </div>
         </nav>
     </header>
+    <h1 class="title"></h1>
     <section id="kob_og_salg_af_andel"></section>
 
     <footer>
@@ -265,7 +267,6 @@
 
 
     </footer>
-    <script src="script.js"></script>
     <script>
         document.addEventListener("DOMContentLoaded", start);
 
@@ -280,11 +281,10 @@
         function vis(data) {
             console.log(data.content.rendered)
             document.querySelector("section").innerHTML = data.content.rendered;
-
+            document.querySelector(".title").innerHTML = data.title.rendered;
 
         }
-
     </script>
-</body>
 
-</html>
+    <script src="script.js"></script>
+</body></html>
