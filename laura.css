@@ -20,3 +20,38 @@
     transition: 0.5s;
 
 }
+
+#karriere a {
+    color: black;
+}
+
+#karriere h2 {
+    padding: 15px;
+}
+
+#karriere img {
+    padding: 15px;
+}
+
+.data-container h2 {
+    text-align: left;
+    padding: 0;
+}
+
+.data-container h3 {
+    text-align: left;
+    padding: 0;
+}
+
+.data-container p {
+    text-align: left;
+    padding: 0;
+}
+
+.email {
+    text-transform: uppercase;
+}
+
+#teamet section {
+    display: grid;
+}
