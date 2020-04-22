@@ -17,6 +17,32 @@ section {
     padding: 20px;
 }
 
+.section_til_billede {
+    padding: 0px;
+}
+
+/* Layoutstyling */
+
+section {
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+img {
+    width: 100%;
+    padding: 0;
+}
+
+figure {
+    margin: 0;
+}
+
+.wp-block-group {
+    flex-grow: 1;
+    flex-basis: 400px;
+}
+
 /* -------- STYLING TIL TEKSTERRRRRRRRRRRRRR -----------*/
 
 p {
@@ -44,15 +70,17 @@ h2 {
 }
 
 h3 {
-    padding: 15px;
     font-family: georgia;
     font-weight: lighter;
+    text-align: center;
+    padding: 15px;
 }
 
 h4 {
-    padding: 15px;
     font-family: georgia;
     font-weight: lighter;
+    text-align: center;
+    padding: 15px;
 }
 
 
