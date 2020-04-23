@@ -114,7 +114,7 @@ header {
     width: 100%;
     height: auto;
     overflow: hidden;
-    font-family: futura pt;
+    font-family: futura-pt;
     text-transform: uppercase;
     font-weight: 300;
 }
@@ -284,7 +284,29 @@ footer {
     color: white;
     font-family: georgia, serif;
     font-weight: 100;
+    text-align: left;
+    font-family: futura-pt;
+    font-weight: 400;
 
+}
+
+footer p {
+    font-family: futura-pt;
+    font-weight: 400;
+    padding: 0;
+    padding-bottom: 10px;
+    margin: 0;
+}
+
+footer a {
+    font-family: futura-pt;
+    font-weight: 400;
+}
+
+footer h3 {
+    text-align: left;
+    font-family: futura-pt;
+    font-weight: 400;
 }
 
 .col {
@@ -454,12 +476,12 @@ footer {
     /*header*/
 
     header {
-        font-family: futura pt;
-        color: #3c4b6e;
+        font-family: futura-pt, sans-serif;
+        font-weight: 400;
+        font-style: normal;
+
         margin: 0 auto;
         width: 100%;
-        font-weight: 200;
-
         background-color: white;
         text-transform: uppercase;
         padding: 20px 0 20px 0;
@@ -470,21 +492,19 @@ footer {
 
     header h4 {
         font-weight: 500;
-        font-family: futura pt;
+        font-family: futura-pt;
         padding: 0;
         text-align: left;
     }
 
     header a {
-        font-family: futura pt;
+        font-family: futura-pt;
         padding: 0;
         text-align: left;
 
     }
 
-    header li {
-        font-weight: 300;
-    }
+
 
     .desktop_nav {
         position: relative;
@@ -502,6 +522,8 @@ footer {
 
 
 
+
+
     header a {
         color: black;
     }
@@ -516,6 +538,7 @@ footer {
         width: 100%;
         transform: translateY(-115%);
         z-index: 100000;
+        color: black;
         /*        background-color: #3c4b6e;
  */
     }
@@ -538,6 +561,7 @@ footer {
         max-width: 1200px;
         width: 100%;
         margin: auto;
+        color: #3c4b6e;
 
 
     }
