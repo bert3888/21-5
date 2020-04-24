@@ -54,17 +54,17 @@ p {
 }
 
 h1 {
-    font-family: georgia;
-    font-weight: lighter;
+    font-family: 'Playfair Display', serif;
+    font-weight: 600;
     font-size: 3em;
     text-align: center;
     padding-top: 15px;
 }
 
 h2 {
-    font-family: georgia;
-    font-weight: lighter;
-    font-size: 1.5em;
+    font-family: futura-pt, sans-serif;
+    font-weight: 600;
+    font-size: 1.6em;
     text-align: center;
     padding-bottom: 15px;
 }
@@ -129,6 +129,7 @@ header img {
 
 .burgermenu {
     display: block;
+
 }
 
 .desktop_nav,
@@ -402,12 +403,24 @@ footer {
 /* -------- STYLING TIL FORSIDE -----------*/
 
 
+#forside section {
+    flex-wrap: wrap-reverse;
+}
 
 #forside .wp-block-quote {
+
     font-size: 1.5rem;
     text-align: center;
     margin-top: 0vw;
     margin-bottom: 0vw;
+}
+
+#forside .wp-block-quote {
+    padding: 5vw;
+}
+
+#forside .group_reverse {
+    flex-wrap: wrap-reverse;
 }
 
 
