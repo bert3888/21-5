@@ -343,6 +343,9 @@
         </div>
     </main>
 
+    <h1 class="title"></h1>
+    <section id="udvaelgelse"></section>
+
     <footer>
         <div class="footergrid">
             <div class="col">
@@ -378,7 +381,10 @@
         let urlParams = new URLSearchParams(window.location.search);
         let id = urlParams.get("id");
         let skrot_til_slot;
+        let udvaelgelse;
         const url = `http://lauraragnars.dk/21-5/wordpress/wp-json/wp/v2/pages/473`;
+        const url1 = `http://lauraragnars.dk/21-5/wordpress/wp-json/wp/v2/pages/480`;
+
 
         function start() {
             hentData();
@@ -388,12 +394,15 @@
         }
 
         async function hentData() {
+            let jsonData1 = await fetch(url1);
+            udvaelgelse = await jsonData1.json();
 
             let jsonData = await fetch(url);
             skrot_til_slot = await jsonData.json();
             console.log(skrot_til_slot)
             buildCarousel();
             vis(skrot_til_slot);
+            vis1(udvaelgelse);
         }
 
         //        async function start() {
@@ -462,8 +471,12 @@
             console.log(data.content.rendered)
             document.querySelector("#fra_skrot_til_slot").innerHTML = data.content.rendered;
             document.querySelector(".title").innerHTML = data.title.rendered;
+        }
 
-
+        function vis1(data) {
+            console.log(data.content.rendered)
+            document.querySelector("#udvaelgelse").innerHTML = data.content.rendered;
+//            document.querySelector(".title").innerHTML = data.title.rendered;
         }
     </script>
 
