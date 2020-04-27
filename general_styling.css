@@ -137,6 +137,16 @@ header img {
     display: none;
 }
 
+/* desktop menu  */
+
+.active {
+    color: red;
+}
+
+.inactive {
+    color: lightgrey;
+}
+
 /* Menu Funktioner */
 
 .multi_level,
@@ -397,28 +407,45 @@ footer h3 {
     }
 }
 
-.slidedown,
-.slideop {
+.slidedown {
     animation-name: slide_kf;
-    animation-duration: 0.5s;
+    animation-duration: 0.4s;
     animation-timing-function: linear;
-    animation-fill-mode: both;
+    animation-fill-mode: forwards;
 }
 
 .slideop {
-    animation-direction: reverse;
+    animation-name: slideop_kf;
+    animation-duration: 0.4s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
 
 }
 
 @keyframes slide_kf {
     0% {
         transform: translateY(-115%);
+        opacity: 0;
     }
 
     100% {
         transform: translateY(0%);
+        opacity: 1;
     }
 }
+
+@keyframes slideop_kf {
+    0% {
+        transform: translateY(0%);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(-115%);
+        opacity: 0;
+    }
+}
+
 
 
 

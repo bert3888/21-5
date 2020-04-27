@@ -160,16 +160,16 @@
         <!--       DESKTOP MENU -->
         <ul class="mainmenu">
             <div class="desktoplogo"> <a href="index.html"><img src="billeder/logo.svg" alt=""></a></div>
-            <li>Boligerne</li>
-            <li>Destinationer</li>
-            <li>Konceptet</li>
-            <li>Økonomi</li>
-            <li>Om os</li>
-            <li>Kontakt</li>
+            <li class="boligerne_mm menupunkt">Boligerne</li>
+            <li class="destinationer_mm menupunkt">Destinationer</li>
+            <li class="konceptet_mm menupunkt">Konceptet</li>
+            <li class="okonomi_mm menupunkt">Økonomi</li>
+            <li class="omos_mm menupunkt">Om os</li>
+            <li class="kontakt_mm menupunkt">Kontakt</li>
         </ul>
         <nav class="desktop_nav">
 
-            <div class="dropdownmenu">
+            <div class="dropdownmenu slideop">
 
 
                 <ul class="menu_process">
@@ -288,14 +288,14 @@
             const respons = await fetch(url);
             const json = await respons.json();
             vis(json);
-            start2();
+            //            start2();
         }
 
-        async function start2() {
-            const respons2 = await fetch(photosrc);
-            const json2 = await respons2.json();
-            vis2(json2);
-        }
+        //        async function start2() {
+        // const respons2 = await fetch(photosrc);
+        // const json2 = await respons2.json();
+        // vis2(json2);
+        // }
 
         function vis(data) {
             console.log(data.content.rendered)
@@ -303,12 +303,15 @@
 
         }
 
-        function vis2(data2) {
-            document.querySelector("img").src = data.guid.rendered;
-        }
+        //        function vis2(data2) {
+        //            document.querySelector("img").src = data.guid.rendered;
+        //        }
+
     </script>
 
 
     <script src="script.js"></script>
 
-</body></html>
+</body>
+
+</html>
