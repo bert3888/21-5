@@ -43,59 +43,80 @@
       } else if (dropDown.classList.contains("slideop")) {
           dropDown.classList.remove("slideop");
           dropDown.classList.add("slidedown")
+      } else {
+          dropDown.classList.add("slidedown");
       }
+
+
 
   }
 
 
 
-  //  const boligerne = document.querySelector(".boligerne_mm");
-  //  const destinationer = document.querySelector(".destinationer_mm");
-  //  const konceptet = document.querySelector(".konceptet_mm");
-  //  const okonomi = document.querySelector(".okonomi_mm");
-  //  const omOs = document.querySelector(".omos_mm");
-  //  const kontakt = document.querySelector(".kontakt_mm");
-  //
-  //
-  //  boligerne.addEventListener("click", activeOrNot);
-  //  destinationer.addEventListener("click", activeOrNot);
+  const boligerne = document.querySelector(".boligerne_mm");
+  const destinationer = document.querySelector(".destinationer_mm");
+  const konceptet = document.querySelector(".konceptet_mm");
+  const okonomi = document.querySelector(".okonomi_mm");
+  const omOs = document.querySelector(".omos_mm");
+  const kontakt = document.querySelector(".kontakt_mm");
+
+
+
+  boligerne.addEventListener("click", activeOrNot);
+  destinationer.addEventListener("click", activeOrNot2);
   //  konceptet.addEventListener("click", activeOrNot);
   //  okonomi.addEventListener("click", activeOrNot);
   //  omOs.addEventListener("click", activeOrNot);
   //  kontakt.addEventListener("click", activeOrNot);
-  //  const menupunkt = document.querySelector(".menupunkt");
 
-  //  menupunkt.addEventListener("click", activeOrNot);
+  const menuProcess = document.querySelector(".menu_boligerne");
+  const menuDestinationer = document.querySelector(".menu_destinationer");
+  const menuKonceptet = document.querySelector(".menu_konceptet");
+  const menuOkonomi = document.querySelector(".menu_okonomi");
+  const menuOmos = document.querySelector(".menu_omos");
+  const menuKontakt = document.querySelector(".menu_kontakt");
+
 
   function activeOrNot() {
       console.log("activeornot")
-      //      boligerne.classList.remove("active");
-      //      destinationer.classList.remove("active");
-      //      konceptet.classList.remove("active");
-      //      okonomi.classList.remove("active");
-      //      omOs.classList.remove("active");
-      //      kontakt.classList.remove("active");
-      //
-      //      boligerne.classList.add("inactive");
-      //      destinationer.classList.add("inactive");
-      //      konceptet.classList.add("inactive");
-      //      okonomi.classList.add("inactive");
-      //      omOs.classList.add("inactive");
-      //      kontakt.classList.add("inactive");
-
-      menupunkt.classList.remove("active");
-      menupunkt.classList.add("inactive");
 
 
-      this.classList.remove("inactive")
-      this.classList.add("active");
+      boligerne.classList.remove("inactive");
+      boligerne.classList.toggle("active");
 
+      menuProcess.classList.remove("inactive");
+      menuProcess.classList.add("active");
+
+      menuDestinationer.classList.add("inactive");
+      menuKonceptet.classList.add("inactive");
+      menuOkonomi.classList.add("inactive");
+      menuOmos.classList.add("inactive");
+      menuKontakt.classList.add("inactive");
+
+  }
+
+  function activeOrNot2() {
 
   }
 
 
 
 
+
+  //
+  // boligerne.classList.remove("active");
+  //      destinationer.classList.remove("active");
+  //      konceptet.classList.remove("active");
+  //      okonomi.classList.remove("active");
+  //      omOs.classList.remove("active");
+  //      kontakt.classList.remove("active");
+  //
+  //      boligerne.classList.add("inactive");
+  //      destinationer.classList.add("inactive");
+  //      konceptet.classList.add("inactive");
+  //      okonomi.classList.add("inactive");
+  //      omOs.classList.add("inactive");
+  //      kontakt.classList.add("inactive");
 
 
 
