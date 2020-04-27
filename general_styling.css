@@ -144,7 +144,7 @@ header img {
 }
 
 .inactive {
-    color: lightgrey;
+    opacity: 0.3;
 }
 
 /* Menu Funktioner */
@@ -410,22 +410,25 @@ footer h3 {
 .slidedown {
     animation-name: slide_kf;
     animation-duration: 0.4s;
-    animation-timing-function: linear;
+    animation-timing-function: ease-in;
     animation-fill-mode: forwards;
+
 }
 
 .slideop {
     animation-name: slideop_kf;
     animation-duration: 0.4s;
-    animation-timing-function: linear;
+    animation-timing-function: ease-out;
     animation-fill-mode: forwards;
+
 
 }
 
 @keyframes slide_kf {
     0% {
-        transform: translateY(-115%);
+        transform: translateY(-15%);
         opacity: 0;
+        pointer-events: none;
     }
 
     100% {
@@ -441,8 +444,9 @@ footer h3 {
     }
 
     100% {
-        transform: translateY(-115%);
+        transform: translateY(-15%);
         opacity: 0;
+        pointer-events: none;
     }
 }
 
@@ -541,6 +545,8 @@ footer h3 {
         font-family: futura-pt;
         padding: 0;
         text-align: left;
+        font-size: 0.85rem;
+        font-weight: 300;
 
     }
 
