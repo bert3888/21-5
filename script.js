@@ -80,12 +80,12 @@
   function activeOrNot() {
       console.log("activeornot")
 
-//      boligerne.classList.remove("active");
-//      destinationer.classList.remove("active");
-//      konceptet.classList.remove("active");
-//      okonomi.classList.remove("active");
-//      omOs.classList.remove("active");
-//      kontakt.classList.remove("active");
+      //      boligerne.classList.remove("active");
+      //      destinationer.classList.remove("active");
+      //      konceptet.classList.remove("active");
+      //      okonomi.classList.remove("active");
+      //      omOs.classList.remove("active");
+      //      kontakt.classList.remove("active");
 
       boligerne.classList.remove("inactive");
       boligerne.classList.toggle("active");
