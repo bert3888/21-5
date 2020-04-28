@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kontakt os</title>
     <link rel="stylesheet" href="general_styling.css">
+    <link rel="stylesheet" href="https://use.typekit.net/win1jok.css">
+    <link rel="stylesheet" href="laura.css">
+
+
 </head>
 
 <body>
@@ -240,11 +244,35 @@
             </div>
         </nav>
     </header>
-
+    <h1 class="title"></h1>
     <section id="kontakt_os"></section>
 
     <footer></footer>
     <script src="script.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", start);
+
+
+        const link = "http://lauraragnars.dk/21-5/wordpress/wp-json/wp/v2/pages/2962"
+
+        let data = []
+
+        function start() {
+            hentData();
+        }
+
+        async function hentData() {
+            const response = await fetch(link);
+            data = await response.json();
+            visData();
+        }
+
+        function visData() {
+            document.querySelector("#kontakt_os").innerHTML = data.content.rendered;
+            document.querySelector(".title").innerHTML = data.title.rendered;
+        }
+
+    </script>
 </body>
 
 </html>

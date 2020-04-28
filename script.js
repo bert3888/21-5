@@ -64,12 +64,12 @@
 
   boligerne.addEventListener("click", activeOrNot);
   destinationer.addEventListener("click", activeOrNot2);
-  //  konceptet.addEventListener("click", activeOrNot);
-  //  okonomi.addEventListener("click", activeOrNot);
-  //  omOs.addEventListener("click", activeOrNot);
-  //  kontakt.addEventListener("click", activeOrNot);
+  konceptet.addEventListener("click", activeOrNot3);
+  okonomi.addEventListener("click", activeOrNot4);
+  omOs.addEventListener("click", activeOrNot5);
+  kontakt.addEventListener("click", activeOrNot6);
 
-  const menuProcess = document.querySelector(".menu_boligerne");
+  const menuBoligerne = document.querySelector(".menu_boligerne");
   const menuDestinationer = document.querySelector(".menu_destinationer");
   const menuKonceptet = document.querySelector(".menu_konceptet");
   const menuOkonomi = document.querySelector(".menu_okonomi");
@@ -80,12 +80,18 @@
   function activeOrNot() {
       console.log("activeornot")
 
+//      boligerne.classList.remove("active");
+//      destinationer.classList.remove("active");
+//      konceptet.classList.remove("active");
+//      okonomi.classList.remove("active");
+//      omOs.classList.remove("active");
+//      kontakt.classList.remove("active");
 
       boligerne.classList.remove("inactive");
       boligerne.classList.toggle("active");
 
-      menuProcess.classList.remove("inactive");
-      menuProcess.classList.add("active");
+      menuBoligerne.classList.remove("inactive");
+      menuBoligerne.classList.add("active");
 
       menuDestinationer.classList.add("inactive");
       menuKonceptet.classList.add("inactive");
@@ -95,7 +101,85 @@
 
   }
 
+
   function activeOrNot2() {
+
+      destinationer.classList.remove("inactive");
+      destinationer.classList.toggle("active");
+
+      menuDestinationer.classList.remove("inactive");
+      menuDestinationer.classList.add("active");
+
+      menuBoligerne.classList.add("inactive");
+      menuKonceptet.classList.add("inactive");
+      menuOkonomi.classList.add("inactive");
+      menuOmos.classList.add("inactive");
+      menuKontakt.classList.add("inactive");
+
+  }
+
+  function activeOrNot3() {
+
+      konceptet.classList.remove("inactive");
+      konceptet.classList.toggle("active");
+
+      menuKonceptet.classList.remove("inactive");
+      menuKonceptet.classList.add("active");
+
+      menuBoligerne.classList.add("inactive");
+      menuDestinationer.classList.add("inactive");
+      menuOkonomi.classList.add("inactive");
+      menuOmos.classList.add("inactive");
+      menuKontakt.classList.add("inactive");
+
+  }
+
+
+  function activeOrNot4() {
+
+      okonomi.classList.remove("inactive");
+      okonomi.classList.toggle("active");
+
+      menuOkonomi.classList.remove("inactive");
+      menuOkonomi.classList.add("active");
+
+      menuBoligerne.classList.add("inactive");
+      menuDestinationer.classList.add("inactive");
+      menuKonceptet.classList.add("inactive");
+      menuOmos.classList.add("inactive");
+      menuKontakt.classList.add("inactive");
+
+  }
+
+  function activeOrNot5() {
+
+      omOs.classList.remove("inactive");
+      omOs.classList.toggle("active");
+
+      menuOmos.classList.remove("inactive");
+      menuOmos.classList.add("active");
+
+      menuBoligerne.classList.add("inactive");
+      menuDestinationer.classList.add("inactive");
+      menuKonceptet.classList.add("inactive");
+      menuOkonomi.classList.add("inactive");
+      menuKontakt.classList.add("inactive");
+
+  }
+
+  function activeOrNot6() {
+
+      kontakt.classList.remove("inactive");
+      kontakt.classList.toggle("active");
+
+      menuKontakt.classList.remove("inactive");
+      menuKontakt.classList.add("active");
+
+      menuBoligerne.classList.add("inactive");
+      menuDestinationer.classList.add("inactive");
+      menuKonceptet.classList.add("inactive");
+      menuOkonomi.classList.add("inactive");
+      menuOmos.classList.add("inactive");
 
   }
 
