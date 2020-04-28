@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Person detalje</title>
     <link rel="stylesheet" href="general_styling.css">
+    <link rel="stylesheet" href="https://use.typekit.net/win1jok.css">
+
 </head>
 
 <body>
@@ -241,13 +243,15 @@
             </div>
         </nav>
     </header>
+
     <section id="medarbejder_singleview">
 
         <article class="medarbejder">
-            <img src="" alt="">
+            <img class="billede" src="" alt="">
             <h2 class="navn"></h2>
             <h3 class="titel"></h3>
             <p class="email"></p>
+            <p class="beskrivelse"></p>
         </article>
 
     </section>
@@ -319,9 +323,10 @@
 
         function visMedarbejder() {
             document.querySelector(".navn").textContent = person.title.rendered;
+            document.querySelector(".beskrivelse").innerHTML = person.content.rendered;
             document.querySelector(".titel").textContent = person.titel;
             document.querySelector(".email").textContent = person.email;
-            document.querySelector("img").src = person.billede.guid;
+            document.querySelector(".billede").src = person.billede.guid;
         }
 
     </script>

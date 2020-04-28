@@ -4,6 +4,8 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Velkommen til 21-5. Her hjælper vi dig og din familie med at opnå jeres feriebolig drømme i udlandet. Vi har mange års erfaring og er altid klar til et kaffemøde.">
+
     <title>21-5 Forside</title>
     <link rel="stylesheet" href="general_styling.css">
     <link rel="stylesheet" href="https://use.typekit.net/win1jok.css">
@@ -11,7 +13,6 @@
 
 
 </head>
-
 
 <body>
     <!---------   header som skal kopieres ind på alle sider!!!----------------->
@@ -237,6 +238,7 @@
                     <li> <a href="index.html">Book et kaffemøde</a></li>
                     <li> <a href="index.html">Orienteringsmøde</a></li>
                     <h4><a href="karriere.html">Karriere i 21-5</a></h4>
+                    <h4><a href="kontakt_os.html">Kontakt Os</a></h4>
 
                 </ul>
 
@@ -244,8 +246,9 @@
         </nav>
     </header>
 
-    <img>
+    <img class="forsidebillede">
     <section id="forside">
+
     </section>
 
 
@@ -280,30 +283,47 @@
 
 
         const url = `http://lauraragnars.dk/21-5/wordpress/wp-json/wp/v2/pages/2602`;
-        const photosrc = `http://lauraragnars.dk/21-5/wordpress/wp-json/wp/v2/media?parent=2602`;
-
+        const url2 = "http://lauraragnars.dk/21-5/wordpress/wp-json/wp/v2/billede/2976";
         async function start() {
             const respons = await fetch(url);
             const json = await respons.json();
+            const respons2 = await fetch(url2);
+            const json2 = await respons2.json();
             vis(json);
-            //            start2();
+            vis2(json2);
         }
 
-        //        async function start2() {
-        // const respons2 = await fetch(photosrc);
-        // const json2 = await respons2.json();
-        // vis2(json2);
-        // }
 
         function vis(data) {
             console.log(data.content.rendered)
             document.querySelector("section").innerHTML = data.content.rendered;
-
         }
 
-        //        function vis2(data2) {
-        //            document.querySelector("img").src = data.guid.rendered;
-        //        }
+        let billeder = [];
+
+        function vis2(data2) {
+
+
+            billeder.forEach(photo => {
+                document.querySelector(".forsidebillede").src = photo.billeder;
+                console.log(photo)
+            })
+        }
+
+        //        medarbejdere.forEach(person => {
+        //            let klon = teametTemplate.cloneNode(true).content;
+        //            klon.querySelector(".navn").textContent = person.title.rendered;
+        //            klon.querySelector(".titel").textContent = person.titel;
+        //            klon.querySelector(".email").textContent = person.email;
+        //            klon.querySelector("img").src = person.billede.guid;
+        //
+        //            container.appendChild(klon);
+        //
+        //            container.lastElementChild.addEventListener("click", () => {
+        //                location.href = "medarbejder_singleview.html?id=" + person.id;
+        //            });
+        //
+        //        })
 
     </script>
 
