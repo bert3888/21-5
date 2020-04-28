@@ -99,6 +99,8 @@
       menuOmos.classList.add("inactive");
       menuKontakt.classList.add("inactive");
 
+      i
+
   }
 
 

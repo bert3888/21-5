@@ -1,3 +1,11 @@
+* {
+    box-sizing: border-box;
+}
+
+
+
+
+
 #bliv_medlem h2 {
     text-align: left;
     padding: 15px;
@@ -33,6 +41,29 @@
     padding: 15px;
 }
 
+/* --------- TEAMET ----------*/
+
+
+body {
+    margin: 0;
+}
+
+.data-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    grid-gap: 20px;
+    cursor: pointer;
+}
+
+
+
+img {
+    width: 100%;
+}
+
 .data-container h2 {
     text-align: left;
     padding: 0;
@@ -41,6 +72,11 @@
 .data-container h3 {
     text-align: left;
     padding: 0;
+    font-family: futura-pt;
+    font-weight: 400;
+    margin-top: 0;
+    margin-bottom: 0;
+
 }
 
 .data-container p {
@@ -48,8 +84,16 @@
     padding: 0;
 }
 
+.data-container .navn {
+    margin-bottom: 2px;
+    margin-top: 5px;
+
+}
+
 .email {
     text-transform: uppercase;
+    margin-top: 3px;
+    margin-bottom: 30px;
 }
 
 #teamet section {
