@@ -54,7 +54,7 @@
 
 
   const boligerne = document.querySelector(".boligerne_mm");
-  const destinationer = document.querySelector(".destinationer_mm");
+  const destinationer_mm = document.querySelector(".destinationer_mm");
   const konceptet = document.querySelector(".konceptet_mm");
   const okonomi = document.querySelector(".okonomi_mm");
   const omOs = document.querySelector(".omos_mm");
@@ -63,7 +63,7 @@
 
 
   boligerne.addEventListener("click", activeOrNot);
-  destinationer.addEventListener("click", activeOrNot2);
+  destinationer_mm.addEventListener("click", activeOrNot2);
   konceptet.addEventListener("click", activeOrNot3);
   okonomi.addEventListener("click", activeOrNot4);
   omOs.addEventListener("click", activeOrNot5);

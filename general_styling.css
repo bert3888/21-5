@@ -7,6 +7,9 @@
 
 body {
     margin: 0;
+    background-image: url(billeder/waves6.svg);
+    background-size: cover;
+
 }
 
 
