@@ -3,6 +3,7 @@
 
 * {
     box-sizing: border-box;
+
 }
 
 body {
@@ -161,7 +162,6 @@ header img {
 #menu:checked ~ .multi_level,
 .item input:checked ~ ul {
     display: block;
-
 }
 
 /* Menu styling*/
