@@ -142,9 +142,7 @@ header img {
 
 /* desktop menu  */
 
-.active {
-    color: #ff8f15;
-}
+.active {}
 
 .inactive {
     opacity: 0.3;
@@ -678,10 +676,9 @@ footer h3 {
         color: #3c4b6e;
     }
 
-    .mainmenu a:active {
-        color: #ff8f15;
-    }
+    .mainmenu a:active {}
 
+    /**/
     .desktop_nav a:active {
         color: #ff8f15;
     }
