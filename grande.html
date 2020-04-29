@@ -4,6 +4,8 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Denne størrelse bolig er perfekt til jer der leder efter en feriebolig i udlandet med 4-5 soveværelser og med masser af plads til hele familien. ">
+    <meta name="keywords" content="21-5, grande, forening">
     <title>Ejerforening</title>
     <link rel="stylesheet" href="general_styling.css">
     <link rel="stylesheet" href="https://use.typekit.net/win1jok.css">
@@ -242,60 +244,63 @@
             </div>
         </nav>
     </header>
-<<<<<<< HEAD
-    <h1 class="title"></h1>
-=======
+    <<<<<<< HEAD <h1 class="title">
+        </h1>
+        =======
 
-    <h1 class="title"></h1>
+        <h1 class="title"></h1>
 
->>>>>>> layout_aendringer
-    <section id="Ejerforening_side">
+        >>>>>>> layout_aendringer
+        <section id="Ejerforening_side">
 
-    </section>
-    <footer>
-        <div class="footergrid">
-            <div class="col">
-                <div class="kontaktinfo"></div>
+        </section>
+        <footer>
+            <div class="footergrid">
+                <div class="col">
+                    <div class="kontaktinfo"></div>
+                </div>
+
+                <div class="col">
+                    <h3>Andet</h3>
+                    <a href="link.html">Nyheder</a>
+                    <a href="link.html">Presse</a>
+                    <a href="link.html">Cookie- og privatlivspolitik</a>
+                    <a href="link.html">Ofte stillede spørgsmål</a>
+                </div>
+                <div class="col">
+                    <div class="fb_icon"></div>
+                    <p>Besøg os på Facebook!</p>
+                    <div class="instagram_icon"></div>
+                    Brug #215moments
+                </div>
             </div>
 
-            <div class="col">
-                <h3>Andet</h3>
-                <a href="link.html">Nyheder</a>
-                <a href="link.html">Presse</a>
-                <a href="link.html">Cookie- og privatlivspolitik</a>
-                <a href="link.html">Ofte stillede spørgsmål</a>
-            </div>
-            <div class="col">
-                <div class="fb_icon"></div>
-                <p>Besøg os på Facebook!</p>
-                <div class="instagram_icon"></div>
-                Brug #215moments
-            </div>
-        </div>
+
+        </footer>
 
 
-    </footer>
+        <script src="script.js"></script>
+        <script>
+            document.addEventListener("DOMContentLoaded", start);
+
+            const url = `http://lauraragnars.dk/21-5/wordpress/wp-json/wp/v2/pages/461`;
+
+            async function start() {
+                const respons = await fetch(url);
+                const json = await respons.json();
+                vis(json);
+            }
+
+            function vis(data) {
+                console.log(data.content.rendered)
+                document.querySelector("section").innerHTML = data.content.rendered;
+                document.querySelector(".title").innerHTML = data.title.rendered;
 
 
-    <script src="script.js"></script>
-    <script>
-        document.addEventListener("DOMContentLoaded", start);
+            }
 
-        const url = `http://lauraragnars.dk/21-5/wordpress/wp-json/wp/v2/pages/461`;
+        </script>
 
-        async function start() {
-            const respons = await fetch(url);
-            const json = await respons.json();
-            vis(json);
-        }
+</body>
 
-        function vis(data) {
-            console.log(data.content.rendered)
-            document.querySelector("section").innerHTML = data.content.rendered;
-            document.querySelector(".title").innerHTML = data.title.rendered;
-
-
-        }
-    </script>
-
-</body></html>
+</html>

@@ -87,15 +87,6 @@ h4 {
 
 
 
-/* ----- LINKS --------*/
-
-a {
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
-}
 
 /* ------------- HEADER OG FOOTER ---------------*/
 /*burgermenu*/
@@ -141,7 +132,7 @@ header img {
 /* desktop menu  */
 
 .active {
-    color: red;
+    color: #ff8f15;
 }
 
 .inactive {
@@ -162,6 +153,18 @@ header img {
 #menu:checked ~ .multi_level,
 .item input:checked ~ ul {
     display: block;
+}
+
+
+/* ----- LINKS --------*/
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+    opacity: 1;
 }
 
 /* Menu styling*/
@@ -543,6 +546,8 @@ footer h3 {
     }
 
 
+
+
     /*header*/
 
     header {
@@ -572,7 +577,7 @@ footer h3 {
         padding: 0;
         text-align: left;
         font-size: 0.85rem;
-        font-weight: 300;
+        font-weight: 400;
 
     }
 
@@ -598,6 +603,10 @@ footer h3 {
 
     header a {
         color: black;
+    }
+
+    header h4 a:hover {
+        opacity: 1;
     }
 
     .dropdownmenu {
@@ -634,8 +643,14 @@ footer h3 {
         width: 100%;
         margin: auto;
         color: #3c4b6e;
+    }
 
+    .mainmenu a:active {
+        color: #ff8f15;
+    }
 
+    .desktop_nav a:active {
+        color: #ff8f15;
     }
 
     /*  Menu på hovedmenuside  */
