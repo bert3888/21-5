@@ -9,6 +9,45 @@
     <title>FAQ</title>
     <link rel="stylesheet" href="general_styling.css">
     <link rel="stylesheet" href="https://use.typekit.net/win1jok.css">
+    <style>
+        /*   ----  FAQ dropdown styling  ---     */
+
+        #faq1 {
+            padding: 5vw;
+        }
+
+        #faq1 h3 {
+            text-align: left;
+            margin: 0;
+            color: black;
+
+        }
+
+        #faq1 p {
+            text-align: left;
+            margin: 0;
+
+        }
+
+        .svar1 {
+            /*
+            max-height: 0;
+            overflow: hidden;
+*/
+            position: relative;
+
+        }
+
+        spm1:active .svar1 {
+            background-color: aliceblue;
+        }
+
+
+
+
+        /*   ----  FAQ dropdown funktion  ---     */
+
+    </style>
 </head>
 
 <body>
@@ -243,9 +282,55 @@
         </nav>
     </header>
 
+
+
     <h1 class="title"></h1>
 
-    <section id="faq"></section>
+    <section id="faq">
+    </section>
+
+
+
+
+    <!--
+    <template>
+        <article class="sporgsmålSvar">
+            <div class="container">
+                <div class="accordion">
+                    <div class="accordion_item">
+                        <h3 class="sporgsmal sporgsmal_link"></h3>
+                        <div class="answer show_answer">
+                            <p class="svar"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </template>
+-->
+
+
+    <div class="content_1">
+        <div class="content_menu">
+            <details>
+                <summary>
+                    Ofte stillede spørgsmål</summary>
+                <section id="faq1"></section>
+            </details>
+            <template id="template1">
+                <details>
+                    <summary class="faq">
+                        <h3 class="spm1"></h3>
+                        <p class="svar1"></p>
+                    </summary>
+                </details>
+            </template>
+        </div>
+    </div>
+
+
+
+
 
     <footer>
         <div class="footergrid">
@@ -270,29 +355,59 @@
 
 
     </footer>
-    <script src="script.js"></script>
+
     <script>
         document.addEventListener("DOMContentLoaded", start);
 
-        const url = `http://lauraragnars.dk/21-5/wordpress/wp-json/wp/v2/pages/404`;
+        const url = `http://lauraragnars.dk/21-5/wordpress/wp-json/wp/v2/faq`;
+        const container1 = document.querySelector("#faq1");
+        const sporgsmålSvar1Template = document.querySelector("#template1");
+        const details = document.querySelectorAll("details");
 
-        async function start() {
-            const respons = await fetch(url);
-            const json = await respons.json();
-            vis(json);
-        }
+        let sporgsmålSvar1 = [];
 
-        function vis(data) {
-            console.log(data.content.rendered)
-            document.querySelector("section").innerHTML = data.content.rendered;
-            document.querySelector(".title").innerHTML = data.title.rendered;
-
+        function start() {
+            hentData();
 
         }
+
+        async function hentData() {
+            const response = await fetch(url);
+            sporgsmålSvar1 = await response.json();
+            visSporgsmålSvar1();
+
+        }
+
+        function visSporgsmålSvar1() {
+            console.log(sporgsmålSvar1);
+            container1.innerHTML = "";
+
+            sporgsmålSvar1.forEach(faq => {
+                let klon1 = sporgsmålSvar1Template.cloneNode(true).content;
+                klon1.querySelector(".spm1").textContent = faq.sprgsml;
+                klon1.querySelector(".svar1").textContent = faq.svar;
+                container1.appendChild(klon1);
+
+            });
+
+
+
+        }
+
+        details.forEach((targetDetail) => {
+            targetDetail.addEventListener("click", () => {
+                details.forEach((detail) => {
+                    if (detail !== targetDetail) {
+                        detail.removeAttribute("open");
+                    }
+                })
+            })
+        })
 
     </script>
 
     <script src="script.js"></script>
+
 </body>
 
 </html>

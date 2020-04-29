@@ -247,7 +247,10 @@
         </nav>
     </header>
 
-    <img class="forsidebillede">
+    <div class="container">
+        <img class="forsidebillede">
+    </div>
+
     <section id="forside">
 
     </section>
@@ -304,11 +307,16 @@
 
         function vis2(data2) {
 
+            json2.billeder.forEach((billede, index) => {
+                const theClone =
+                    document.querySelector("template").cloneNode(true).content;
 
-            billeder.forEach(photo => {
-                document.querySelector(".forsidebillede").src = photo.billeder;
-                console.log(photo)
+                theClone.querySelector("img").src = billede.guid;
+
+                document.querySelector(".container").appendChild(theClone);
             })
+
+
         }
 
         //        medarbejdere.forEach(person => {
@@ -325,12 +333,9 @@
         //            });
         //
         //        })
-
     </script>
 
 
     <script src="script.js"></script>
 
-</body>
-
-</html>
+</body></html>

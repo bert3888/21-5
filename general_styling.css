@@ -3,6 +3,7 @@
 
 * {
     box-sizing: border-box;
+
 }
 
 body {
@@ -155,7 +156,6 @@ header img {
 #menu:checked ~ .multi_level,
 .item input:checked ~ ul {
     display: block;
-
 }
 
 
@@ -483,6 +483,32 @@ footer h3 {
 }
 
 
+/* -------- STYLING TIL HOVEDMENUPUNKTSIDE -----------*/
+
+#konceptet_nav {
+    display: flex;
+    flex-wrap: nowrap;
+    padding: 0 35px;
+    all:
+
+}
+
+#konceptet_nav button {
+    flex-basis: auto;
+    flex-grow: 1;
+    background-color: #3c4b6e;
+    border-radius: 5px;
+    margin: 2vw;
+}
+
+
+#konceptet_nav a {
+    font-family: futura-pt;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+
 /* ------------- MEDIAQUIRES ---------------*/
 @media only screen and (min-width:600px) {
     .footergrid {
@@ -628,6 +654,29 @@ footer h3 {
 
     .desktop_nav a:active {
         color: #ff8f15;
+    }
+
+    /*  Menu på hovedmenuside  */
+
+    #konceptet_nav {
+        margin: auto;
+        display: flex;
+        flex-wrap: nowrap;
+
+    }
+
+    #konceptet_nav button {
+        margin: 10px;
+        background-color: #3c4b6e;
+        border-radius: 5px;
+    }
+
+
+    #konceptet_nav a {
+        font-family: futura-pt;
+        font-size: 1rem;
+        font-weight: 600;
+        color:
     }
 
 }
