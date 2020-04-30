@@ -1,0 +1,13 @@
+.wp-block-button {
+    font-family: futura-pt, sans-serif;
+    font-weight: 600;
+    border: 1px solid #FF8F15;
+    border-radius: 0.2em;
+    padding: 0.5em;
+    background-color: #FF8F15;
+    width: 10vw;
+}
+
+.button1 {
+    width: 13vw;
+}
