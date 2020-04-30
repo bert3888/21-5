@@ -99,15 +99,16 @@
       menuOmos.classList.add("inactive");
       menuKontakt.classList.add("inactive");
 
-      i
+
+
 
   }
 
 
   function activeOrNot2() {
 
-      destinationer.classList.remove("inactive");
-      destinationer.classList.toggle("active");
+      destinationer_mm.classList.remove("inactive");
+      destinationer_mm.classList.toggle("active");
 
       menuDestinationer.classList.remove("inactive");
       menuDestinationer.classList.add("active");

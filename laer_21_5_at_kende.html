@@ -257,8 +257,9 @@
             </div>
         </nav>
     </header>
-
-    <h1 class="title"></h1>
+    <section>
+        <h1 class="title"></h1>
+    </section>
     <section id="laer_21_5_at_kende"></section>
 
     <footer>
@@ -297,7 +298,7 @@
 
         function vis(data) {
             console.log(data.content.rendered)
-            document.querySelector("section").innerHTML = data.content.rendered;
+            document.querySelector("#laer_21_5_at_kende").innerHTML = data.content.rendered;
             document.querySelector(".title").innerHTML = data.title.rendered;
 
         }
