@@ -134,9 +134,6 @@ header img {
 
 .burgermenu {
     display: block;
-
-
-
 }
 
 .desktop_nav,
@@ -151,6 +148,7 @@ header img {
 .inactive {
     opacity: 0.3;
 }
+
 
 /* Menu Funktioner */
 
@@ -316,6 +314,15 @@ footer {
     text-align: left;
     font-family: futura-pt;
     font-weight: 400;
+
+}
+
+.someicons {
+    display: flex;
+}
+
+.someicons img {
+    height: 50px;
 
 }
 
