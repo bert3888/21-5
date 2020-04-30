@@ -9,50 +9,70 @@
     <title>FAQ</title>
     <link rel="stylesheet" href="general_styling.css">
     <link rel="stylesheet" href="https://use.typekit.net/win1jok.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
     <style>
         /*   ----  FAQ dropdown styling  ---     */
 
+        /*
+#faq1 h3 {
+text-align: left;
+margin: 0;
+font-size: 1.1rem;
 
-        #faq1 h3 {
-            text-align: left;
-            margin: 0;
-            font-size: 1.1rem;
+}
 
+#faq1 p {
+text-align: left;
+font-size: 1rem;
+}
+
+#faq1 {
+padding-top: 0;
+}
+
+.content_1,
+.content_2,
+.content_3,
+.content_4,
+.content_5 {
+width: 80vw;
+margin: 0 auto;
+background-color: #e0e0e0;
+border-radius: 10px;
+margin-bottom: 10vw;
+}
+
+.content_5 {
+
+margin-bottom: 10vw;
+
+}
+
+.content_1 h1,
+.content_2 h1,
+.content_3 h1,
+.content_4 h1,
+.content_5 h1 {
+font-family: futura-pt, sans-serif;
+font-weight: 600;
+font-size: 1.6em;
+margin: 0;
+*/
+        /*            border-bottom: 0.5px solid #656565;*/
+        /*
+            padding: 2.5vw;
         }
 
-        #faq1 p {
-            text-align: left;
-            font-size: 1rem;
+        .content_1 h3,
+        .content_2 h3,
+        .content_3 h3,
+        .content_4 h3,
+        .content_5 h3 {
+
+            border-bottom: 0.5px solid #656565;
+            padding: 2.5vw;
         }
 
-        #faq1 {
-            padding-top: 0;
-        }
-
-        .content_1,
-        .content_2,
-        .content_3,
-        .content_4,
-        .content_5 {
-
-            font-size: 1.4rem;
-
-        }
-
-        .content_5 {
-            margin-bottom: 10vw;
-
-        }
-
-        .content_1 h1,
-        .content_2 h1,
-        .content_3 h1,
-        .content_4 h1,
-        .content_5 h1 {
-            margin: 0;
-            font-size: 1.4rem;
-
-        }
 
         details summary::-webkit-details-marker {
             display: none;
@@ -62,15 +82,45 @@
 
         summary {}
 
+        @media only screen and (min-width:800px) {
 
 
+            .faq_section {
+                margin-bottom: 10vw;
+            }
 
+            .content_1,
+            .content_2,
+            .content_3,
+            .content_4,
+            .content_5 {
+                width: 30vw;
+                margin: 0 auto;
+                background-color: #e0e0e0;
+                border-radius: 10px;
+                margin-bottom: 1.5vw;
+            }
 
+            .content_1 h1,
+            .content_2 h1,
+            .content_3 h1,
+            .content_4 h1,
+            .content_5 h1 {
+                font-size: 1.3em;
+                margin: 0;
 
+                padding: 1vw;
+            }
 
+            .content_5 {
+
+                margin-bottom: 0vw;
+
+            }
+        }
+*/
 
         /*   ----  FAQ dropdown funktion  ---     */
-
     </style>
 </head>
 
@@ -308,7 +358,9 @@
 
 
     <section>
-        <h1 class="title"></h1>
+        <h1 class="title">
+            <h1>FAQ</h1>
+        </h1>
     </section>
 
     <template id="template1">
@@ -329,7 +381,6 @@
                     </summary>
                     <section id="faq1"></section>
                 </details>
-
             </div>
         </div>
 
@@ -451,11 +502,8 @@
             console.log(titel);
             document.querySelector(".title").textContent = data.title.rendered;
         }
-
     </script>
 
     <script src="script.js"></script>
 
-</body>
-
-</html>
+</body></html>
