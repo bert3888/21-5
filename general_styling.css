@@ -8,7 +8,7 @@
 
 body {
     margin: 0;
-    background-image: url(billeder/waves6.svg);
+    background-image: url(billeder/waves9.svg);
     background-size: cover;
 
 }
@@ -58,22 +58,24 @@ p {
 }
 
 h1 {
-    font-family: 'Playfair Display', serif;
-    /*    font-family: futura-pt;*/
+    font-family: 'Playfair Display',
+        serif;
+/*        font-family: futura-pt;*/
+    /*    font-family: georgia;*/
     font-weight: 600;
     font-size: 3em;
     text-align: left;
     padding-top: 15px;
     padding-left: 15px;
 
-
-
 }
 
 h2 {
     font-family: futura-pt, sans-serif;
+
     font-weight: 600;
     font-size: 1.6em;
+
     text-align: left;
     padding-bottom: 15px;
     padding-left: 15px;
