@@ -22,6 +22,17 @@
 
   }
 
+  // Mobile burgermenu
+
+  document.querySelector("#nav_icon").addEventListener("click", onClickMenu);
+
+  function onClickMenu() {
+      document.getElementById("nav_icon").classList.toggle("change");
+      document.querySelector("header").classList.toggle("bgcolor");
+
+  }
+
+
   // MENUUUUUUU
 
 
@@ -204,17 +215,3 @@
   //      okonomi.classList.add("inactive");
   //      omOs.classList.add("inactive");
   //      kontakt.classList.add("inactive");
-
-
-
-
-
-  // Mobile burgermenu
-
-  document.querySelector("#nav_icon").addEventListener("click", onClickMenu);
-
-  function onClickMenu() {
-      document.getElementById("nav_icon").classList.toggle("change");
-      document.querySelector("header").classList.toggle("bgcolor");
-
-  }
