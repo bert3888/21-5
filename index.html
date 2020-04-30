@@ -247,6 +247,13 @@
         </nav>
     </header>
 
+    <template>
+        <section>
+            <img class="carousel_imgs">
+        </section>
+
+    </template>
+
     <div class="container">
         <img class="forsidebillede">
     </div>
@@ -291,33 +298,37 @@
         async function start() {
             const respons = await fetch(url);
             const json = await respons.json();
-            const respons2 = await fetch(url2);
-            const json2 = await respons2.json();
             vis(json);
-            vis2(json2);
+            buildCarousel();
         }
 
 
         function vis(data) {
             console.log(data.content.rendered)
             document.querySelector("section").innerHTML = data.content.rendered;
+
         }
 
         let billeder = [];
 
-        function vis2(data2) {
+        function buildCarousel() {
 
-            json2.billeder.forEach((billede, index) => {
-                const theClone =
-                    document.querySelector("template").cloneNode(true).content;
+            theJSON.billeder.forEach((billede, index) => {
+                const theClone = document.querySelector("template").cloneNode(true).content;
+                const secondClone = document.querySelector("template").cloneNode(true).content;
 
                 theClone.querySelector("img").src = billede.guid;
 
+
                 document.querySelector(".container").appendChild(theClone);
+
             })
 
 
+
         }
+
+
 
         //        medarbejdere.forEach(person => {
         //            let klon = teametTemplate.cloneNode(true).content;
