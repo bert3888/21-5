@@ -248,16 +248,15 @@
         </nav>
     </header>
 
+    <div class="forside_billede_cover">
+        <img class="splash_image"></div>
+
     <template>
         <section>
             <img class="carousel_imgs">
         </section>
 
     </template>
-
-    <div class="container">
-        <img class="forsidebillede">
-    </div>
 
     <section id="forside">
 
@@ -308,29 +307,33 @@
 
 
         function vis(data) {
-            console.log(data.content.rendered)
+            console.log(data)
             document.querySelector("section").innerHTML = data.content.rendered;
-
-        }
-
-        let billeder = [];
-
-        function buildCarousel() {
-
-            theJSON.billeder.forEach((billede, index) => {
-                const theClone = document.querySelector("template").cloneNode(true).content;
-                const secondClone = document.querySelector("template").cloneNode(true).content;
-
-                theClone.querySelector("img").src = billede.guid;
-
-
-                document.querySelector(".container").appendChild(theClone);
-
-            })
-
+            document.querySelector(".splash_image").src = data.splash_image.guid;
 
 
         }
+
+
+
+        //        let billeder = [];
+        //
+        //        function buildCarousel() {
+        //
+        //            theJSON.billeder.forEach((billede, index) => {
+        //                const theClone = document.querySelector("template").cloneNode(true).content;
+        //                const secondClone = document.querySelector("template").cloneNode(true).content;
+        //
+        //                theClone.querySelector("img").src = billede.guid;
+        //
+        //
+        //                document.querySelector(".container").appendChild(theClone);
+        //
+        //            })
+
+
+
+
 
 
 

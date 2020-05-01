@@ -519,32 +519,32 @@ footer h3 {
     flex-wrap: wrap-reverse;
 }
 
+.splash_image {
+    width: 100vw;
+    margin-top: 9vw;
+}
 
-/* -------- STYLING TIL HOVEDMENUPUNKTSIDE -----------*/
+iframe {
+    max-width: 100%;
+}
 
-#konceptet_nav {
+#forside .wp-block-buttons {
     display: flex;
-    flex-wrap: nowrap;
-    padding: 0 35px;
+    width: 100%;
+    justify-content: center;
+}
 
+#forside .wp-block-button {
+    width: 25vw;
+    text-align: center;
+    margin-left: 0;
 
 }
 
-#konceptet_nav button {
-    flex-basis: auto;
-    flex-grow: 1;
-    background-color: #3c4b6e;
-    border-radius: 5px;
-    margin: 2vw;
+#forside .wp-block-button:nth-child(2),
+#forside .wp-block-button:nth-child(3) {
+    margin-left: 15px;
 }
-
-
-#konceptet_nav a {
-    font-family: futura-pt;
-    font-size: 0.9rem;
-    font-weight: 600;
-}
-
 
 
 /* ------------- FAQ dropdown styling ---------------*/
@@ -613,12 +613,16 @@ details summary::-webkit-details-marker {
     display: none;
 }
 
+#faq details {
+    transition: 1s ease;
+}
+
 
 
 
 /* ------------- MEDIAQUIRES ---------------*/
 @media only screen and (min-width:600px) {
-/*
+    /*
     .footergrid {
         grid-template-columns: repeat(auto-fill, minmax(33%, 1fr));
     }
@@ -834,6 +838,39 @@ details summary::-webkit-details-marker {
         font-weight: 600;
         color:
     }
+
+    /*    FORSIDE styling desktop */
+
+    .splash_image {
+        width: 100vw;
+        height: 60vh;
+        margin-top: 1vw;
+    }
+
+    iframe {
+        width: 100vw;
+        height: 40vw;
+    }
+
+    #forside .wp-block-buttons {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+    }
+
+    #forside .wp-block-button {
+        width: 10vw;
+        text-align: center;
+        margin-left: 0;
+
+    }
+
+    #forside .wp-block-button:nth-child(2),
+    #forside .wp-block-button:nth-child(3) {
+        margin-left: 3vw;
+    }
+
+
 
     /*    FAQ styling desktop */
 
