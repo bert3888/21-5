@@ -524,7 +524,7 @@ footer h3 {
     margin-top: 9vw;
 }
 
-iframe {
+#forside iframe {
     max-width: 100%;
 }
 
@@ -842,12 +842,18 @@ details summary::-webkit-details-marker {
     /*    FORSIDE styling desktop */
 
     .splash_image {
+        object-fit: cover;
+        max-width: 100%;
+        height: auto;
+        margin-top: 1vw;
+        /*
         width: 100vw;
         height: 60vh;
         margin-top: 1vw;
+*/
     }
 
-    iframe {
+    #forside iframe {
         width: 100vw;
         height: 40vw;
     }
@@ -909,7 +915,7 @@ details summary::-webkit-details-marker {
 
 }
 
- /* ------------- VIDEOER PÅ LÆR 21-5 AT KENDE ---------------*/
+/* ------------- VIDEOER PÅ LÆR 21-5 AT KENDE ---------------*/
 
 iframe {
     padding: 5px;
