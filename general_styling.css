@@ -107,6 +107,14 @@ h4 {
     padding-bottom: 0;
 }
 
+#bliv_medlem .wp-block-button {
+    width: 200px;
+
+}
+
+#kontakt_os .wp-block-button {
+    width: 200px;
+}
 
 
 
@@ -115,9 +123,9 @@ h4 {
 
 .mobilelogo {
     filter: invert(1);
-    width: 15vw;
+    width: 13vw;
     position: absolute;
-    left: 42.5vw;
+    left: 43.5vw;
 
 }
 
