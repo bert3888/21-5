@@ -538,6 +538,10 @@ footer h3 {
     width: 25vw;
     text-align: center;
     margin-left: 0;
+}
+
+#forside .wp-block-buttons .book_kaffemode {
+    width: 30vw;
 
 }
 
