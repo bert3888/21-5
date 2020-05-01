@@ -13,6 +13,10 @@ body {
 
 }
 
+.hide {
+    display: none;
+}
+
 
 
 section {
@@ -165,6 +169,31 @@ header img {
 .inactive {
     opacity: 0.3;
 }
+
+.login_icon {
+    width: 32px;
+    height: 32px;
+    background-image: url(billeder/login_icon2.svg);
+    background-size: cover;
+    position: absolute;
+    right: 90vw;
+    top: 7vw;
+    pointer-events: none;
+
+}
+
+.danskeflag {
+    width: 27px;
+    height: 20px;
+    background-image: url(billeder/danskeflag.png);
+    background-size: cover;
+    position: absolute;
+    right: 81vw;
+    top: 8.2vw;
+    pointer-events: none;
+    z-index: 1;
+}
+
 
 
 /* Menu Funktioner */

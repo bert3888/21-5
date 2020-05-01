@@ -29,6 +29,7 @@
   function onClickMenu() {
       document.getElementById("nav_icon").classList.toggle("change");
       document.querySelector("header").classList.toggle("bgcolor");
+      document.querySelector(".danskeflag").classList.toggle("hide");
 
   }
 
