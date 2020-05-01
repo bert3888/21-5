@@ -855,20 +855,33 @@ details summary::-webkit-details-marker {
 
     #forside iframe {
         width: 100vw;
-        height: 40vw;
+        height: 100vh;
     }
 
     #forside .wp-block-buttons {
+        margin: 5vw;
         display: flex;
         width: 100%;
         justify-content: center;
     }
 
     #forside .wp-block-button {
-        width: 10vw;
+        width: 200px;
+        height: 50px;
         text-align: center;
         margin-left: 0;
+        padding: auto;
+    }
 
+    #forside .wp-block-buttons,
+    .book_kaffemode {
+        margin: 1vw;
+
+    }
+
+
+    #forside .wp-block-button a {
+        font-size: 1.3em;
     }
 
     #forside .wp-block-button:nth-child(2),
