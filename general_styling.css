@@ -37,6 +37,8 @@ section {
 
 }
 
+
+
 img {
     width: 100%;
     padding: 0;
@@ -50,6 +52,24 @@ figure {
     flex-grow: 1;
     flex-basis: 400px;
 }
+
+.forsidetitle {
+    color: white;
+    font-size: 4.8vw;
+    max-width: 60vw;
+    left: 20vw;
+    font-family: futura-pt;
+    font-weight: 600;
+    position: absolute;
+    z-index: 1000;
+    text-align: center;
+    top: 28vw;
+    margin: 0 auto;
+    text-transform: uppercase;
+    opacity: 1;
+    text-shadow: 3px 3px 15px grey;
+}
+
 
 /* -------- STYLING TIL TEKSTERRRRRRRRRRRRRR -----------*/
 
@@ -813,6 +833,22 @@ details summary::-webkit-details-marker {
     }
 
 
+    .forsidetitle {
+        color: white;
+        font-size: 4.8vw;
+        max-width: 60vw;
+        left: 20vw;
+        font-family: futura-pt;
+        font-weight: 600;
+        position: absolute;
+        z-index: 1000;
+        text-align: center;
+        top: 15vw;
+        margin: 0 auto;
+        text-transform: uppercase;
+        opacity: 1;
+        text-shadow: 3px 3px 15px grey;
+    }
 
 
 
